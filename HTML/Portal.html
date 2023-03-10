@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/Portal.css" />
+    <title>Portal page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+  </head>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <!-- Header Section -->
+<header>
+    <div class="logo">
+        <a href="./Home.html">
+            <img src="/images/logo.png" alt="Comapany Logo">
+        </a>
+    </div>
+    <nav class="nav" id="nav_menu">
+        <ion-icon name="close-outline" class="header_close" id="close_menu"></ion-icon>
+        <ul class="nav_list">
+            <li class="nav_item"><a href="./Home.html" class="nav_link nav-active">Home</a></li>
+            <li class="nav_item"><a href="./aboutus1.html" class="nav_link">About Us</a></li>
+            <li class="nav_item"><a href="./gallery.html" class="nav_link">Gallery</a></li>
+            <li class="nav_item"><a href="./Contact_us.html" class="nav_link">Contact Us</a></li>
+            <li class="nav_item"><a href="./Portal.html" class="nav_link">Portals</a></li>
+        </ul>
+    </nav>
+    <ion-icon name="menu-outline" class="header_toggle" id="toggle_menu"></ion-icon>
+
+</header>
+<!-- Java Script -->
+<script src="/JS/nav_bar.js"></script>
+<!-- Body -->
+  <body>
+    <div class="sec">
+      <div><p class="head">Hello User</p></div>
+      <div class="separator"></div>
+      <a href="./T_login.html" target="_blank" class="btn"
+        >Teacher's Portal
+        <span><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+      <br><br>
+      <a href="./S_login.html" target="_blank" class="btn">Student's Portal<span><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+      <br><br>
+      <a href="./Signup.html" target="_blank" class="btn">New User Sign Up<span><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+      <!-- <div class="signup">New User?<a href="Signup.html" class="signup">Sign Up</a></div> -->
+    </div>
+  </body>
+<!-- Footer -->
+<footer class="footer">
+    <div class="foot-con">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="./aboutus1.html">About Us</a></li>
+                    <!-- <li><a href="#">Our Services</a></li> -->
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="./Contact_us.html">Contact Us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <!-- <li><a href="#">Support</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./Home.html">Home</a></li>
+                    <li><a href="./Portal.html">Portals</a></li>
+                    <!-- <li><a href="#">Sign Up</a></li> -->
+                    <li><a href="./gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> 
+</html>
