@@ -1,0 +1,157 @@
+body, h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #1b262c;
+    font-size: 2.25em;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    color: #1b262c;
+    /* background: linear-gradient(to left, #1769a0,#0a1820); */
+    background: #060922;
+    margin-top: 15vh;
+}
+
+button{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+span{
+    display: none;
+    color: darkred;
+    font-size: 0.825em;  
+}
+
+input:invalid ~ span{
+    display: none;
+}
+
+.rectangle-content{
+    max-width: 660px;
+    max-height: 763px;
+    flex-direction: column;
+    margin: 0 auto;
+    background: #09aff4;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+
+.rectangle-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.signup-input{
+    display: flex;
+    font-family: "Montserrat",sans-serif;
+    background: #FFFFFF;
+    border: 2px solid #AAAAAA;
+    border-radius: 10px;
+    font-size: 1em;
+    height: 2em;
+    color: #0f4c75;
+}
+
+.form-group{
+    display: flex;
+}
+
+.signup-label{
+    font-size: 0.825em;
+    margin-bottom: 4px;
+    margin-top: 40px;
+}
+
+#email, #fullname, #password, #phone, #profession{
+    margin-bottom: 18.4px;
+}
+
+.g1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 100%; 
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 20px;
+    margin-right: 35px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 0px 35px 0px;
+    margin-right: 35px;
+}
+
+.g2{
+    flex-grow: 2;
+    border-radius: 20px;
+    padding-right: 25px;
+    flex-wrap: wrap;
+    flex-direction: column;    
+}
+
+.g3{
+    flex-wrap: wrap;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.register{
+    background: linear-gradient(to right,#060922,#09aff4);
+    border-color: #bbe1fa;
+    color: white;
+    font-size: 1em;
+    height: 2.5em;
+    border-radius: 20px;
+    width: 5em;
+}
+
+.register:hover{
+    /* background: linear-gradient(to right,#0f4c75,#7ec5fc); */
+    opacity: 0.7;
+}
+
+.form-check-register{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px 5px;
+    margin-right: 35px;
+}
+
+.signup-label-register{
+    color: #111111;
+    text-shadow: -2px 1px 4px #767676;
+}
+
+.h1{
+    margin-top: 60px;
+    /* margin-bottom: 0%;
+    padding-bottom: 0%; */
+}
+
+@media (max-width: 1080px) {
+
+    .rectangle-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0px;
+    }
+  }
