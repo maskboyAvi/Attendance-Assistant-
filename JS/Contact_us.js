@@ -1,3 +1,4 @@
+//Toggle in the Navabar
 var navMenu = document.getElementById("nav_menu")
 var toggleMenu = document.getElementById("toggle_menu")
 var closeMenu = document.getElementById("close_menu")
@@ -9,10 +10,7 @@ closeMenu.addEventListener("click", () =>{
     navMenu.classList.remove("show")
 })
 
-var Name = document.getElementById("name");
-var mailEl = document.getElementById("send-mail");
-var sendersEmail = document.getElementById("email").value;
-var sendersMsg = document.getElementById("message").value;
+// Validation of Name
 function validName(char){
     if((char>=65 && char<=90) || (char>=97 && char<=122) || (char==32)){
         return true;
@@ -26,10 +24,10 @@ function validName(char){
         return false;
     }
 }
+// Validation of email
 function checkEmail(){
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const inputEmail = document.querySelector('#email').value;
-    // console.log(inputEmail);
         if(!regexEmail.test(inputEmail)){
             alert("Invalid Email");
             return false;
@@ -37,6 +35,7 @@ function checkEmail(){
             return true;
         };
     }
+// Using ajax jquery    
 $('#feedbackForm').on('submit',function(e){
     //alert('ss')
     e.preventDefault();
