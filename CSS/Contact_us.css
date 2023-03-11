@@ -203,7 +203,7 @@ button{
     color: #16f1dc;
     cursor: pointer;
 }
-
+/* ----  Responsiveness   ----  */
 @media screen and (max-width: 900px){
 	.content{
 		padding: 10px 0 0;
@@ -216,7 +216,7 @@ button{
 		width: 100%;
 		flex-direction: column-reverse;
 		border-radius: 0;
-		box-shadow: 0px 0px 0px 0px;
+		box-shadow: 0px;
 	}
 	.other{
 		width: 100%;
@@ -232,7 +232,20 @@ button{
 		align-items: flex-start;
 	}
 }
+/* Header Navbar */
 
+:root{
+  --primary-text-color: rgb(255, 255, 255);
+  --secondary-text-color: #0f4c75;
+  --project-color-1: #1b262c;
+  --project-color-2: #0f4c75;
+  --project-color-3: #3282b8;
+  --project-color-4: #bbe1fa;
+  --clr-dark-blue: #060922;
+  --big-font:3rem;
+  --h4-font:1.5rem;
+  --p-font:1.2rem;
+}
   header{
     position: relative;
     z-index: 1;
@@ -325,18 +338,7 @@ button{
     }
   }
   
-  :root{
-    --primary-text-color: rgb(255, 255, 255);
-    --secondary-text-color: #0f4c75;
-    --project-color-1: #1b262c;
-    --project-color-2: #0f4c75;
-    --project-color-3: #3282b8;
-    --project-color-4: #bbe1fa;
-    --clr-dark-blue: #060922;
-    --big-font:3rem;
-    --h4-font:1.5rem;
-    --p-font:1.2rem;
-  }
+  /* footer 1*/
   .footer{
     overflow: hidden;
     background-color: #24262b;
@@ -369,7 +371,6 @@ button{
   .footer-col h4::before{
     content: '';
     position: absolute;
-    /* left: 0; */
     bottom: 0px;
     background-color: #e91e63;
     height: 3px;
@@ -384,23 +385,6 @@ button{
   .footer-col ul li a:hover{
     transform: translateX(10px);
     color: #eee;
-  }
-  .footer-col .social-links a{
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0px 8px 8px 0;
-    padding: 3px 0;
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
-    color: #fff;
-    border-radius: 50%;
-    transition: all 0.5s ease;
-  }
-  .footer-col .social-links a:hover{
-    color: #777;
-    background-color: #fff;
   }
   @media (max-width: 850px) {
     .footer-col{
