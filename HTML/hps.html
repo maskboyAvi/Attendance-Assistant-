@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student portal</title>
+    <link rel="stylesheet" href="../CSS/hps.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./Home.html">
+                <img src="../Images/logo.png" alt="Comapany Logo" >
+            </a>
+        </div>
+        <nav class="nav" id="nav_menu">
+            <ion-icon name="close-outline" class="header_close" id="close_menu"></ion-icon>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="./Home.html" class="nav_link">Home</a></li>
+                <li class="nav_item"><a href="./aboutus1.html" class="nav_link">About Us</a></li>
+                <li class="nav_item"><a href="./gallery.html" class="nav_link">Gallery</a></li>
+                <li class="nav_item"><a href="./Contact_us.html" class="nav_link">Contact Us</a></li>
+                <li class="nav_item"  ><div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Account</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <img src="../Images/acc.png" alt="accimg" id="accimg">
+                     <p id="accname">CS005AKS</p>
+                      <a href="#">Edit Your Profile</a>
+                      <a href="#" id="log">LogOut</a>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+        </nav>
+        <ion-icon name="menu-outline" class="header_toggle" id="toggle_menu"></ion-icon>
+        
+    </header>
+
+     <h1 id="std">Welcome to Student  Portal</h1>
+
+<div class="row">
+     <div  id="al" class="col-6">
+        <h2>Enter the RollNO.</h2>
+      <input type="text" id="in1">
+     <h2>Submit  Code </h2>
+  
+
+     <input type="text" id="in2"> <br>
+     <button id="btn" onclick="submit()">Submit</button>
+    </div>
+    <div class="col-6">
+        <img src="../Images/std.png" alt="std" id="stdu" width="600px" height="350px" style="margin-top: 150px;">
+    </div>
+</div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="foot-con">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./aboutus1.html">About Us</a></li>
+                        <li><a href="./">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./Home.html">Home</a></li>
+                        <li><a href="./Portal.html">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="../JS/hps.js"></script> 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
