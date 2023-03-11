@@ -285,6 +285,41 @@ ul{
     color: #777;
     background-color: #fff;
 }
+.svg-wrap {
+    position: relative;
+    display: flex;
+    margin-top: 14px;
+}
+
+.svg-wrap a {
+    border: 0;
+    padding: 0;
+    display: flex;
+    color: #bbbbbb;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.svg-wrap a svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    transition: fill 0.2s ease-in-out;
+    margin-right: 12px;
+}
+
+.svg-wrap a:hover svg {
+    fill: #16f1dc;
+    cursor: pointer;
+}
+
+.svg-wrap a:hover {
+    background-color: transparent;
+    color: #16f1dc;
+    cursor: pointer;
+}
 @media (max-width: 850px) {
     .footer-col{
         width: 50%;

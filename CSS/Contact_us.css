@@ -186,8 +186,8 @@ button{
 }
 
 .svg-wrap a svg {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     fill: white;
     transition: fill 0.2s ease-in-out;
     margin-right: 12px;
