@@ -198,7 +198,7 @@ header{
     color: wheat;
 }
 body{
-    background-image: url(/Images/bi.jpg);
+    background-image: url(/Images/biteacher.png);
    font-family: "Poppins";
     
     
@@ -282,6 +282,7 @@ body{
     #al{
         margin-left: 2rem;
     }
+    
 }
 @media (max-width: 450px) {
     .footer-col{
