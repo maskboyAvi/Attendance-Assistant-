@@ -72,7 +72,7 @@ header{
 }
 .nav_link:hover{
     font-size: 1.3rem;
-    background-color: var(--clr-dark-blue); 
+    background-color: var(--clr-dark-blue);
 }
 .header_toggle,.header_close{
     display: none;

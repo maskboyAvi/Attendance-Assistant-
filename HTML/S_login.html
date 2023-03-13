@@ -19,14 +19,14 @@
             <p class="welcome-message">Student's Portal needs Username and Password.</p>
             <form class="login-form">
                 <div class="form-control">
-                    <input type="text" id="email" placeholder="Email" onchange="return checkInp()">
+                    <input type="text" id="email" placeholder="Email" onchange="return checkEmail()">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" id="psd" placeholder="Password" onchange="return checkInp()">
+                    <input type="password" id="psd" placeholder="Password">
                     <i class="fas fa-lock"></i>
                 </div>
-                <button class="submit"><a href="./hps.html" target="_blank" rel="noopener noreferrer">Login</a></button><br>
+                <button class="submit"><a target="_blank" rel="noopener noreferrer" onclick="return checkPass()">Login</a></button><br>
                 <!-- <div class="separator"></div> -->
             </form>
             <p class="signup">New User? <a href="./Signup.html">Sign up</a></p><br>

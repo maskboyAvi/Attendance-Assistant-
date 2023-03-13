@@ -38,7 +38,7 @@ button:hover{
    color: #1bf1dc;
 }
 a:hover {
-    background-color: #243342;
+    /* background-color: #243342; */
     color: #16f1d7;
 }
 
@@ -283,6 +283,15 @@ button{
   }
   .nav_link:hover{
     font-size: 1.5rem;
+    text-decoration: none;
+    background-color: #243342;
+  }
+  .nav-active{
+    text-decoration: underline;
+  }
+  .mlogo:hover{
+    background-color: var(--secondary-text-color);
+    cursor: pointer;
   }
   .header_toggle,.header_close{
     display: none;

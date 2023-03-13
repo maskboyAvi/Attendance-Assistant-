@@ -22,7 +22,9 @@
 .section{
     width: 100%;
     min-height: 100vh;
-    background-color: #ddd;
+    /* background-color: var(--clr-dark-blue); */
+    background-image: linear-gradient(135deg,var(--clr-dark-blue)70%,#8b33c5);
+    color: var(--secondary-text-color);
 }
 
 .container{
@@ -55,7 +57,7 @@
 
 .content-section .content h3{
     margin-top: 20px;
-    color: #5d5d5d;
+    color: var(--primary-text-color);
     font-size: 19px;
 }
 
@@ -70,17 +72,26 @@
     margin-top: 30px;
 }
 .content-section .content .button a{
-    background-color: #3d3d3d;
+    background-color: var(--clr-dark-blue);
+    border: solid 2px;
+    display: inline-block;
+    position: relative;
+    border-radius: 0px 20px 0px 20px;
     padding: 12px 40px;
     text-decoration: none;
-    color:#fff;
+    color: var(--secondary-text-color);
     font-size: 25px;
     letter-spacing: 1.5px;
+    transition: all 0.5s;
 }
 
 .content-section .content .button a:hover{
-    background-color: #a52a2a;
-    color: #fff;
+    /* background-color: #a52a2a;
+    color: #fff; */
+    background-color: var(--secondary-text-color);
+    color: var(--primary-text-color);
+    transform:scale(1.1) translate3d(8px,-8px,8px);
+    font-weight: 600;
 }
 
 @media screen and (max-width:768px){
@@ -130,13 +141,13 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 3rem;
-    background-color: var(--project-color-1)  ;
+    background-color: var(--secondary-text-color)  ;
 }
 .logo a{
     margin: 0 1rem;
 }
 .logo a img{
-    height: 50px;
+    height: 60px;
 }
 ul{
     list-style: none;
@@ -154,12 +165,17 @@ ul{
     color: #eee;
     font-size: 1.1rem;
     font-weight: 700;
+    text-decoration: none;
     border-radius: 5px;
     transition: all .5s ease;
 }
+.nav-active{
+    text-decoration: underline;
+}
 .nav_link:hover{
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.3rem;
+    /* color: white; */
+    background-color: var(--clr-dark-blue);
     text-decoration: none;
 }
 .header_toggle,.header_close{
@@ -272,31 +288,37 @@ ul{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 0 0px 10px 0;
     padding: 5px 0;
     text-align: center;
     line-height: 40px;
-    font-size: 25px;
+    font-size: 30px;
+    background-color: transparent;
     color: #fff;
     border-radius: 50%;
     transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-    color: #777;
-    background-color: #fff;
+    color: #16f1dc;
+    cursor: pointer;
+    background-color: transparent;
 }
 .svg-wrap {
     position: relative;
     display: flex;
     margin-top: 14px;
+    /* background-color: #24262b;; */
 }
 
 .svg-wrap a {
     border: 0;
     padding: 0;
+    height: 50px;
+    width: 50px;
     display: flex;
-    color: #bbbbbb;
-    font-size: 16px;
+    /* color: #bbbbbb; */
+    /* background-color: #24262b; */
+    font-size: 40px;
     justify-content: center;
     align-items: center;
     font-style: italic;
@@ -305,7 +327,7 @@ ul{
 .svg-wrap a svg {
     width: 25px;
     height: 25px;
-    fill: white;
+    /* fill: white; */
     transition: fill 0.2s ease-in-out;
     margin-right: 12px;
 }

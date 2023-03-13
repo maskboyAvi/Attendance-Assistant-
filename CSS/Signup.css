@@ -38,7 +38,7 @@ input:invalid ~ span{
     max-height: 763px;
     flex-direction: column;
     margin: 0 auto;
-    background: #09aff4;
+    background: #077bad;
     padding-bottom: 50px;
     border-radius: 20px;
 }
@@ -49,6 +49,7 @@ input:invalid ~ span{
     justify-content: center;
     align-items: center;
     padding: 10px;
+    text-decoration: underline;
 }
 
 .signup-input{
@@ -118,11 +119,15 @@ input:invalid ~ span{
     height: 2.5em;
     border-radius: 20px;
     width: 5em;
+    transition: all .5s ease;
 }
 
 .register:hover{
     /* background: linear-gradient(to right,#0f4c75,#7ec5fc); */
-    opacity: 0.7;
+    /* opacity: 0.8; */
+    background: linear-gradient(to left,#060922 60%,#09aff4);
+    color: #16f1dc;
+    cursor: pointer;
 }
 
 .form-check-register{
@@ -137,6 +142,7 @@ input:invalid ~ span{
 .signup-label-register{
     color: #111111;
     text-shadow: -2px 1px 4px #767676;
+    cursor: pointer;
 }
 
 .h1{
@@ -145,7 +151,7 @@ input:invalid ~ span{
     padding-bottom: 0%; */
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 720px) {
 
     .rectangle-container{
       display: flex;

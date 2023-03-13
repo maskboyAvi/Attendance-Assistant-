@@ -1,6 +1,5 @@
-function checkInp(){
+function checkEmail(){
     var email = document.getElementById("email").value;
-    var pass=document.getElementById("psd").value;
     var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(email.value="")
     {
@@ -12,7 +11,15 @@ function checkInp(){
         alert("Please provide a valid email address");
         return false;
     }
-    else if(pass.value="")
+    // else{
+    //     window.location.href = `./hps.html`;
+    //     return true;
+    // }
+}
+
+function checkPass(){
+    var pass=document.getElementById("psd").value;
+    if(pass.value="")
     {
         alert("Enter your Password");
         return false;
@@ -25,8 +32,8 @@ function checkInp(){
         alert("Password should be less than 12 characters")
         return false;
     }
-    // else{
-    //     window.location.href = `./hps.html`;
-    //     return true;
-    // }
+    else{
+        window.location.href="./hps.html";
+        return true;
+    }
 }
