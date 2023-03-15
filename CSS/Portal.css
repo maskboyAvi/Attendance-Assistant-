@@ -168,6 +168,9 @@ header{
   font-size: 1.5rem;
   background-color: #060922c4;
 }
+.nav-active{
+  text-decoration: underline;
+}
 .header_toggle,.header_close{
   display: none;
 }
