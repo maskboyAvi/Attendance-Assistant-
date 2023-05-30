@@ -6,6 +6,8 @@ const inputFullname = document.querySelector('#fullname');
 const inputPassword = document.querySelector('#password');
 const inputConfirm = document.querySelector('#confirm');
 const inputEmail = document.querySelector('#email');
+const submitBtn = document.querySelector('#submit');
+const profession = document.querySelector('#profession');
 const regexFullname = /^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,}$/;
 const regexPassword = /^[a-zA-Z,0-9]{6,12}$/;
 const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -89,3 +91,26 @@ form.addEventListener("submit",function(event){
     //             return false;
     //     }
     // }
+
+const saveUsers = async() =>{
+    let name = inputFullname.value;
+    let em = inputEmail.value;
+    let pwd = inputPassword.value;
+    let prof = profession.value;
+
+    let response = await fetch('http://localhost:9090/student',{
+        method:"POST",
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+        },
+        body:JSON.stringify({
+            fullName:name,
+            email:em,
+            profession:prof,
+            password:pwd
+        })
+    });
+    console.log(response);
+}
+submitBtn.addEventListener('click',saveUsers);
