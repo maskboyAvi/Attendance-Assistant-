@@ -98,19 +98,37 @@ const saveUsers = async() =>{
     let pwd = inputPassword.value;
     let prof = profession.value;
 
-    let response = await fetch('http://localhost:9090/student',{
-        method:"POST",
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json',
-        },
-        body:JSON.stringify({
-            fullName:name,
-            email:em,
-            profession:prof,
-            password:pwd
-        })
-    });
-    console.log(response);
+    if(prof == 'Student'){
+            let response = await fetch('http://localhost:9090/student',{
+            method:"POST",
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify({
+                fullName:name,
+                email:em,
+                profession:prof,
+                password:pwd
+            })
+        });
+        console.log(response);
+    }
+    else if(prof == 'Teacher'){
+            let response = await fetch('http://localhost:9090/teacher',{
+            method:"POST",
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify({
+                fullName:name,
+                email:em,
+                profession:prof,
+                password:pwd
+            })
+        });
+        console.log(response);
+    }
 }
 submitBtn.addEventListener('click',saveUsers);

@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/T_login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/T_login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Teacher Login</title>
-</head>
-<!-- Java Script -->
-<script src="/JS/Input_check.js"></script>
-<!-- Body -->
-<body>
+  </head>
+  <!-- Java Script -->
+  <script src="/JS/Input_check.js"></script>
+  <!-- Body -->
+  <body>
     <section class="main">
-        <div class="login-container">
-            <p class="title">Welcome back</p>
-            <div class="separator"></div>
-            <p class="welcome-message">Teacher's Portal needs Username and Password.</p>
-            <form class="login-form">
-                <div class="form-control">
-                    <input type="text" id="email" placeholder="Email" onchange="return checkInp()">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="form-control">
-                    <input type="password" id="psd" placeholder="Password" onchange="return checkInp()">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <button class="submit"><a href="./hpt.html" target="_blank">Login</a></button><br>
-                <!-- <div class="separator"></div> -->
-            </form>
-            <p class="signup">New User? <a href="./Signup.html">Sign up</a></p><br>
-            <p class="link"><a class="S_login" href="./S_login.html">Student Portal</a></p>
-        </div>
+      <div class="login-container">
+        <p class="title">Welcome back</p>
+        <div class="separator"></div>
+        <p class="welcome-message">
+          Teacher's Portal needs Username and Password.
+        </p>
+        <form class="login-form">
+          <div class="form-control">
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              onchange="return checkInp()"
+            />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              id="psd"
+              placeholder="Password"
+              onchange="return checkInp()"
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+          <button class="submit">
+            <a href="./hpt.html" target="_blank">Login</a></button
+          ><br />
+          <!-- <div class="separator"></div> -->
+        </form>
+        <p class="signup">New User? <a href="./Signup.html">Sign up</a></p>
+        <br />
+        <p class="link">
+          <a class="S_login" href="./S_login.html">Student Portal</a>
+        </p>
+      </div>
     </section>
-</body>
+    <script>
+      var submitBtn = document.getElementsByClassName("submit")[0];
+      submitBtn.addEventListener("click", checkUser);
+      function checkUser() {
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("psd").value;
+        let loginData = {
+          email: email,
+          password: pass,
+        };
+        let response = fetch("http://localhost:9090/login/teacher", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginData),
+        }).then((res) => {
+          if (res.status == 200) {
+            alert("Login Successful");
+            window.location.href = "./hpt.html";
+          } else {
+            alert("Invalid Credentials");
+          }
+        });
+        console.log(response);
+      }
+    </script>
+  </body>
 </html>
