@@ -6,7 +6,7 @@ const Contact = () => {
     <>
     {/* <Nav /> */}
       <div className="map">
-        <iframe src="https://snazzymaps.com/embed/2369" width="100%" height="100%" style={{border:"none"}}></iframe>
+        <iframe src="https://snazzymaps.com/embed/2369" width="100%" height="100%" style={{border:"none"}} title="map1"/>
     </div> 
     <div className="content">
         <div className="contact">
