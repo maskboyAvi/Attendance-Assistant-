@@ -299,6 +299,9 @@ section ul li.active{
 .pic6::before{
     content: "Chitta Sri Naga Sankara Pavana Saketh Ram";
 }
+.pic7::before{
+    content: "Vishal";
+}
 .fun::before{
     content: "EQUINOX";
 }
