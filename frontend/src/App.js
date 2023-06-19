@@ -10,7 +10,8 @@ function App() {
     <> 
     {/* <Nav /> */}
     {/* <Home /> */}
-    <About />
+    <Contact />
+    {/* <About /> */}
     <Footer />
     </>
   );

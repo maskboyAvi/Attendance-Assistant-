@@ -47,7 +47,7 @@ ul {
   );
 }
 
-.content {
+.content-cts {
   position: relative;
   height: calc(100vh - 50px);
   width: 100vw;
@@ -58,7 +58,7 @@ ul {
   padding: 20px;
 }
 
-.contact {
+.contact-cts {
   width: 85%;
   max-width: 1080px;
   display: flex;
@@ -67,7 +67,7 @@ ul {
   overflow: hidden;
 }
 
-.other {
+.other-cts {
   width: 60%;
   background-image: url(https://images.unsplash.com/photo-1485119584289-30ca2b38c67e?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);
   background-size: cover;
@@ -79,7 +79,7 @@ ul {
   overflow: hidden;
 }
 
-.other:before {
+.other-cts:before {
   content: "";
   position: absolute;
   top: 0;
@@ -89,7 +89,7 @@ ul {
   background: linear-gradient(45deg, rgb(36, 51, 66), rgba(36, 51, 66, 0.81));
 }
 
-.form {
+.form-cts {
   width: 40%;
   background-color: white;
   padding: 20px;
@@ -97,26 +97,26 @@ ul {
   flex-direction: column;
   align-items: flex-end;
 }
-.form h1 {
+.form-cts h1 {
   text-align: center;
   margin-bottom: 20px;
   width: 100%;
 }
-.form form {
+.form-cts form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.flex-rev {
+.flex-rev-cts {
   display: flex;
   flex-direction: column-reverse;
   margin-bottom: 10px;
   width: 100%;
 }
 
-.flex-rev input,
-.flex-rev textarea {
+.flex-rev-cts input,
+.flex-rev-cts textarea {
   border: none;
   background-color: #e6e6e6;
   padding: 12px 10px;
@@ -130,7 +130,7 @@ ul {
   outline-width: thin;
 }
 
-.flex-rev textarea {
+.flex-rev-cts textarea {
   height: 150px;
 }
 
@@ -138,29 +138,29 @@ button {
   margin-right: 0;
 }
 
-.info {
+.info-cts {
   position: relative;
   padding: 20px;
 }
 
-.info h2 {
+.info-cts h2 {
   color: #16f1dc;
   font-size: 34px;
 }
 
-.info h3 {
+.info-cts h3 {
   color: white;
   letter-spacing: 1.2px;
   margin-top: 20px;
 }
 
-.svg-wrap {
+.svg-wrap-cts {
   position: relative;
   display: flex;
   margin-top: 14px;
 }
 
-.svg-wrap a {
+.svg-wrap-cts a {
   border: 0;
   padding: 0;
   display: flex;
@@ -171,7 +171,7 @@ button {
   font-style: italic;
 }
 
-.svg-wrap a svg {
+.svg-wrap-cts a svg {
   width: 25px;
   height: 25px;
   fill: white;
@@ -179,42 +179,42 @@ button {
   margin-right: 12px;
 }
 
-.svg-wrap a:hover svg {
+.svg-wrap-cts a:hover svg {
   fill: #16f1dc;
   cursor: pointer;
 }
 
-.svg-wrap a:hover {
+.svg-wrap-cts a:hover {
   background-color: transparent;
   color: #16f1dc;
   cursor: pointer;
 }
 /* ----  Responsiveness   ----  */
 @media screen and (max-width: 900px) {
-  .content {
+  .content-cts {
     padding: 10px 0 0;
     display: block;
   }
   .map {
     display: none;
   }
-  .contact {
+  .contact-cts {
     width: 100%;
     flex-direction: column-reverse;
     border-radius: 0;
     box-shadow: 0px;
   }
-  .other {
+  .other-cts {
     width: 100%;
     padding: 20px 0;
   }
-  .form {
+  .form-cts {
     width: 100%;
   }
 }
 
 @media screen and (max-height: 660px) {
-  .content {
+  .content-cts {
     align-items: flex-start;
   }
 }
