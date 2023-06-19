@@ -8,9 +8,10 @@ import Nav from './components/Nav';
 function App() {
   return (
     <> 
-    {/* <Nav /> */}
-    {/* <Home /> */}
-    <About />
+    <Nav />
+    {/* <Contact /> */}
+    <Home />
+    {/* <About /> */}
     <Footer />
     </>
   );

@@ -7,4 +7,6 @@ const LandingPage = () => {
 }
 
 export default LandingPage
-//This is Home page actually 
+// This is page after login what we get....
+// Like if (teacher) <TPortal />
+// else <SPortal />
