@@ -1,4 +1,5 @@
 import React from "react";
+import './Gallery.css'
 
 
 function Gallery(){
@@ -37,41 +38,40 @@ function Gallery(){
             })
         }
 return(
-    <div>
-    <div class="container">
-        <h1 class="h-anime">PHOTO GALLERY</h1>
+    <div className="bdy">
+    <div className="container">
+        <h1 className="h-anime">PHOTO GALLERY</h1>
     </div>
     <section>
         <ul>
-            <li class="list active" data-filter="all">All</li>
-            <li class="list" data-filter="AKS">Atharv Krishnarao Sawant</li>
-            <li class="list" data-filter="ALD">Atharva Lalit Dudhe</li>
-            <li class="list" data-filter="AK">Aviral Katiyar</li>
-            <li class="list" data-filter="AG">Ayush Gupta</li>
-            <li class="list" data-filter="AB">Akhilender bongawir</li>
-            <li class="list" data-filter="CSN">Chitta Sri Naga Sankara Pavana Saketh Ram</li>
-            <li class="list" data-filter="Vish">Vishal</li>
+            <li className="list active" data-filter="all">All</li>
+            <li className="list" data-filter="AKS">Atharv Krishnarao Sawant</li>
+            <li className="list" data-filter="ALD">Atharva Lalit Dudhe</li>
+            <li className="list" data-filter="AK">Aviral Katiyar</li>
+            <li className="list" data-filter="AG">Ayush Gupta</li>
+            <li className="list" data-filter="AB">Akhilender bongawir</li>
+            <li className="list" data-filter="CSN">Chitta Sri Naga Sankara Pavana Saketh Ram</li>
+            <li className="list" data-filter="Vish">Vishal</li>
         </ul>
-        <div class="Boys">
-            <div class="pic item pic1" data-item="AKS"><img src="\Images\Main\AKS.jpeg"/></div>
-            <div class="pic item pic2" data-item="ALD"><img src="/Images\Main\Atharva.jpeg"/></div>
-            <div class="pic item pic3" data-item="AK"><img src="/Images/Main/Aviral.jpeg"/></div>
-            <div class="pic item pic4" data-item="AG"><img src="/Images/Main/Ayush.jpeg"/></div>
-            <div class="pic item pic5" data-item="AB"><img src="\Images\Main\Akhil.jpeg"/></div>
-            <div class="pic item pic6" data-item="CSN"><img src="/Images/Main/CSNPSR.jpeg"/></div>
-            <div class="pic item pic7" data-item="Vish"><img src="/Images\Main\Vishal.jpg"/></div>
+        <div className="Boys">
+            <div className="pic item pic1" data-item="AKS"><img src="./Main/AKS.jpeg"/></div>
+            <div className="pic item pic2" data-item="ALD"><img src="./Main/Atharva.jpeg"/></div>
+            <div className="pic item pic3" data-item="AK"><img src="./Main/Aviral.jpeg"/></div>
+            <div className="pic item pic4" data-item="AG"><img src="./Main/Ayush.jpeg"/></div>
+            <div className="pic item pic5" data-item="AB"><img src="./Main/Akhil.jpeg"/></div>
+            <div className="pic item pic6" data-item="CSN"><img src="./Main/CSNPSR.jpeg"/></div>
+            <div className="pic item pic7" data-item="Vish"><img src="./Main/Vishal.jpg"/></div>
         </div>
-        <div class="Boys">
-            <div class="h3-anime">College Fest PICS [EQUINOX 2023]</div>
-            <div class="seperator"></div><br></br>
-            <div class="pic item fun pic7" data-item=""><img src="\Images\Equinox\WhatsApp Image 2023-03-10 at 10.28.53 PM.jpeg"/></div>
-            <div class="pic item fun pic8" data-item=""><img src="\Images\Equinox\WhatsApp Image 2023-03-10 at 10.28.54 PM (1).jpeg"/></div>
-            <div class="pic item fun pic9" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.55 PM (1).jpeg"/></div>
-            <div class="pic item fun pic10" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.55 PM.jpeg"/></div>
-            <div class="pic item fun pic11" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.33.05 PM.jpeg"/></div>
-            <div class="pic item fun pic12" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.31.12 PM (1).jpeg"/></div>
-            <div class="pic item fun pic13" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.54 PM.jpeg"/></div>
-            <div class="pic item fun pic14" data-item=""><img src="/Images/Equinox/WhatsApp Image 2023-03-10 at 10.32.35 PM.jpeg"/></div>
+        <div className="Boys">
+            <div className="seperator"></div><br></br>
+            <div className="pic item fun pic7" data-item=""><img src="./Equinox\WhatsApp Image 2023-03-10 at 10.28.53 PM.jpeg"/></div>
+            <div className="pic item fun pic8" data-item=""><img src="./Equinox\WhatsApp Image 2023-03-10 at 10.28.54 PM (1).jpeg"/></div>
+            <div className="pic item fun pic9" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.28.55 PM (1).jpeg"/></div>
+            <div className="pic item fun pic10" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.28.55 PM.jpeg"/></div>
+            <div className="pic item fun pic11" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.33.05 PM.jpeg"/></div>
+            <div className="pic item fun pic12" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.31.12 PM (1).jpeg"/></div>
+            <div className="pic item fun pic13" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.28.54 PM.jpeg"/></div>
+            <div className="pic item fun pic14" data-item=""><img src="./Equinox/WhatsApp Image 2023-03-10 at 10.32.35 PM.jpeg"/></div>
         </div>
     </section>
     </div>

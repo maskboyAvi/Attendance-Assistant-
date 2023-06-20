@@ -5,12 +5,14 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Nav from './components/Nav';
+import Gallery from './components/gallery';
 
 function App() {
   return (
     <> 
     {/* <Nav /> */}
-    <About2 />
+    {/* <About2 /> */}
+     <Gallery />
     {/* <Home /> */}
     {/* <Contact /> */}
     {/* <About /> */}
