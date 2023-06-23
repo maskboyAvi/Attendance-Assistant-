@@ -49,7 +49,7 @@ return(
             <li className="list" data-filter="ALD">Atharva Lalit Dudhe</li>
             <li className="list" data-filter="AK">Aviral Katiyar</li>
             <li className="list" data-filter="AG">Ayush Gupta</li>
-            <li className="list" data-filter="AB">Akhilender bongawir</li>
+            <li className="list" data-filter="AB">Akhilender Bongirwar</li>
             <li className="list" data-filter="CSN">Chitta Sri Naga Sankara Pavana Saketh Ram</li>
             <li className="list" data-filter="Vish">Vishal</li>
         </ul>

@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Nav from './components/Nav';
+import Portals from './components/Portals';
 import Gallery from './components/gallery';
 
 function App() {
@@ -12,11 +13,12 @@ function App() {
     <> 
     {/* <Nav /> */}
     {/* <About2 /> */}
-     <Gallery />
+     {/* <Gallery /> */}
+     <Portals />
     {/* <Home /> */}
     {/* <Contact /> */}
     {/* <About /> */}
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 }
