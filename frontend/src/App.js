@@ -1,27 +1,25 @@
-import './App.css';
-import About from './components/About';
-import About2 from './components/About2';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Login from './components/Login';
-import Nav from './components/Nav';
-import Portals from './components/Portals';
-import Gallery from './components/gallery';
+// import './App.css';
+import React from 'react';
+import Home from './Components_1/home';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import AboutUs from './Components_1/about';
+import AboutUs1 from './Components_1/aboutUs';
+import Contact from './Components_1/contact';
+// import Gallery from './Components_1/gallery';
 
 function App() {
   return (
-    <> 
-    <Nav />
-    {/* <About2 /> */}
-     {/* <Gallery /> */}
-     {/* <Portals /> */}
-     {/* <Login /> */}
-     <Gallery />
-    {/* <Home /> */}
-    {/* <Contact /> */}
-    {/* <About /> */}
-    {/* <Footer /> */}
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about1" element={<AboutUs1 />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="*" element={<Navigate to="/" />} /> {/* Default fallback route */}
+        </Routes>
+      </Router>
     </>
   );
 }
