@@ -12,7 +12,7 @@ import Gallery from './components/gallery';
 function App() {
   return (
     <> 
-    {/* <Nav /> */}
+    <Nav />
     {/* <About2 /> */}
      {/* <Gallery /> */}
      {/* <Portals /> */}
