@@ -25,6 +25,7 @@ function App() {
           <Route path="/about1" element={<AboutUs1 />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/portals" element={<Portals />} />
           <Route path="/student-portal" element={<SPortal/>} />
           <Route path="/teacher-portal" element={<TPortal/>} />
           <Route path="*" element={<Navigate to="/" />} /> {/* Default fallback route */}
