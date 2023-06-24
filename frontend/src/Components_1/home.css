@@ -21,12 +21,12 @@ section{
     line-height: 1.5;
     margin-bottom: 50px;
 }
-.hero-text h4{
+.hero-text > h4{
     color: var(--secondary-text-color);
     font-size: var(--h4-font);
     margin-bottom: 5px;
 }
-.hero-text p{
+.hero-text > p{
     margin-bottom: 40px;
 }
 .btn{

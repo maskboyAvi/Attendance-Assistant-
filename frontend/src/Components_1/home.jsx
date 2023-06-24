@@ -4,11 +4,12 @@ import Service from './Service';
 import Testimonials from './Testimonials';
 import Header from './header';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
         <Header />
-    {/* HerBegin */}
+    {/* HeroBegin */}
         <section className='hero'>
         <div class="hero-text">
             <h4>&#183; Attendance Assistant &#183;</h4>
@@ -95,7 +96,7 @@ function Home() {
     <section className="contact" style={{backgroundImage:"url(/bgcontact.jpg)"}}>
         <div className="contact-div">
             <h2>Have a question?</h2>
-            <a href="./Contact_us.html" className="btn talk">Let's talk</a>
+            <Link to="/contact" className="btn talk">Let's talk</Link>
         </div>
     </section>
     {/* Footer */}
