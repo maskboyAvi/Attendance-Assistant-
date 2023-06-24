@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*{
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; */
+    /* background-color: #3282b8; */
+    /* background-size: cover; */
+/* } */
+.body-gly{
+    background-image: linear-gradient(115deg,var(--clr-dark-blue)60%,#8b33c5);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,24 +18,19 @@
     /* background-color: #3282b8; */
     background-size: cover;
 }
-body{
-    background-image: linear-gradient(115deg,var(--clr-dark-blue)60%,#8b33c5);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-}
-.container{
+.container-gly{
     color: var(--secondary-text-color);
     text-align: center;
     margin: 100px;
     width: auto;
 }
-.h-anime{
+.h-anime-gly{
     font-weight: bolder;
     font-size: 35px;
     position: relative;
     margin: 60px 0px;
 }
-.h-anime::before{
+.h-anime-gly::before{
     content: '';
     position: absolute;
     width: 100px;
@@ -58,15 +64,15 @@ body{
         width: 100px;
     }
 }
-li{
+.section-gly > li{
     /* opacity: 0.7; */
     transition: opacity 0.4s;
     list-style: none;
 }
-li:hover{
+.section-gly > li:hover{
     opacity: 0.7;
 }
-section{
+.section-gly{
     padding: 20px;
     width: 100%;
     display:flex;
@@ -75,14 +81,14 @@ section{
     flex-direction: column;
     margin: 40px auto;
 }
-section ul{
+.section-gly > ul{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-section ul li{
+.section-gly > ul li{
     list-style: none;
     background-color: #eee;
     padding: 12px 20px;
@@ -91,28 +97,28 @@ section ul li{
     cursor: pointer;
     font-weight: bolder;
 }
-section ul li.active{
+.section-gly > ul li.active{
     background-color: var(--project-color-3);
     color: white;
 }
-.Boys{
+.Boys-gly{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0px 250px 0px 250px;
 }
-.Boys .item{
+.Boys-gly .item-gly{
     position: relative;
     width: 250px;
     height: 250px;
     margin: 5px;
     display: block;
 }
-.Boys .item.hide{
+.Boys-gly .item-gly.hide-gly{
     display: none;
 }
-.Boys .item img{
+.Boys-gly .item-gly img{
     position: absolute;
     top: 0;
     left: 0;
@@ -120,7 +126,7 @@ section ul li.active{
     height: 100%;
     object-fit: cover;
 }
-.h3-anime{
+.h3-anime-gly{
     font-weight: bolder;
     font-size: 35px;
     text-align: center;
@@ -132,7 +138,7 @@ section ul li.active{
     width: 100%;
     /* min-width: 800px; */
 }
-.seperator{
+.seperator-gly{
     margin: 0px 400px 10px 400px;
     position: relative;
     align-items: center;
@@ -146,14 +152,14 @@ section ul li.active{
     transform: translateY(50%);
     animation: animate 4s ease-in-out infinite;
 }
-.Boys .fun{
+.Boys-gly .fun-gly{
     position: relative;
     width: 200px;
     height: 200px;
     margin: 5px;
     display: block;
 }
-.pic{
+.pic-gly{
     position: relative;
     height: 230px;
     border-radius: 10px;
@@ -162,14 +168,14 @@ section ul li.active{
     transition: .5s;
 }
 
-.pic img{
+.pic-gly img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     transition: .5s;
 }
 
-.pic::before{
+.pic-gly::before{
     content:"";
     position: absolute;
     top: 50%;
@@ -186,28 +192,28 @@ section ul li.active{
     transition-delay: .2s;
     z-index: 1;   
 }
-.pic1::before{
+.pic1-gly::before{
     content: "Atharv Krishnarao Sawant";
 }
-.pic2::before{
+.pic2-gly::before{
     content: "Atharva Lalit Dudhe";
 }
-.pic3::before{
+.pic3-gly::before{
     content: "Aviral Katiyar";
 }
-.pic4::before{
+.pic4-gly::before{
     content: "Ayush Gupta";
 }
-.pic5::before{
+.pic5-gly::before{
     content: "Akhilender Bongirwar";
 }
-.pic6::before{
+.pic6-gly::before{
     content: "Chitta Sri Naga Sankara Pavana Saketh Ram";
 }
-.fun::before{
+.fun-gly::before{
     content: "EQUINOX";
 }
-.pic::after{
+.pic-gly::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -218,20 +224,20 @@ section ul li.active{
     background-color: rgba(0,0,0,.4);
     transition: .3s;
 }
-.pic:hover::after{
+.pic-gly:hover::after{
     height: 100%;
 }
-.pic:hover::before{
+.pic-gly:hover::before{
     margin-top: 0;
     opacity: 1;
 }
-.Boys-upper{
+.Boys-upper-gly{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 }
 @media screen and (max-width: 900px) {
-    .Boys-upper{
+    .Boys-upper-gly{
         grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 }

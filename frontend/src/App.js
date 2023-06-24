@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import AboutUs from './Components_1/about';
 import AboutUs1 from './Components_1/aboutUs';
 import Contact from './Components_1/contact';
-// import Gallery from './Components_1/gallery';
+import Gallery from './Components_1/gallery';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/about1" element={<AboutUs1 />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<Navigate to="/" />} /> {/* Default fallback route */}
         </Routes>
       </Router>

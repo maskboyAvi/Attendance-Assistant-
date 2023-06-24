@@ -27,7 +27,7 @@ function Gallery(){
         }
 return(
     <>
-        <div>
+    <div>
     <div class="container">
         <h1 class="h-anime">PHOTO GALLERY</h1>
     </div>
@@ -38,7 +38,7 @@ return(
             <li class="list" data-filter="ALD">Atharva Lalit Dudhe</li>
             <li class="list" data-filter="AK">Aviral Katiyar</li>
             <li class="list" data-filter="AG">Ayush Gupta</li>
-            <li class="list" data-filter="AB">Akhilender bongawir</li>
+            <li class="list" data-filter="AB">Akhilender Bongirwar</li>
             <li class="list" data-filter="CSN">Chitta Sri Naga Sankara Pavana Saketh Ram</li>
             <li class="list" data-filter="Vish">Vishal</li>
         </ul>
