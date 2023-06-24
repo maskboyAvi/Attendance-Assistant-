@@ -140,6 +140,17 @@ header{
     transform: translateX(-50%);
     animation: animate 4s ease-in-out infinite;
 }
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
 li{
     /* opacity: 0.7; */
     transition: opacity 0.4s;
