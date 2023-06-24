@@ -10,13 +10,13 @@ import Gallery from './components/gallery';
 function App() {
   return (
     <> 
-    {/* <Nav /> */}
+    <Nav />
     {/* <About2 /> */}
      <Gallery />
     {/* <Home /> */}
     {/* <Contact /> */}
     {/* <About /> */}
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 }
