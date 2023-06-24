@@ -36,35 +36,6 @@ const Gallery = () => {
     <div className="bdy">
       <div className="container">
         <h1 className="h-anime">PHOTO GALLERY</h1>
-<<<<<<< HEAD
-      </div>
-      <section>
-      <ul>
-<li className="list active" data-filter="all">
-            All
-          </li>
-          <li className="list" data-filter="AKS">
-            Atharv Krishnarao Sawant
-          </li>
-          <li className="list" data-filter="ALD">
-            Atharva Lalit Dudhe
-          </li>
-          <li className="list" data-filter="AK">
-            Aviral Katiyar
-          </li>
-          <li className="list" data-filter="AG">
-            Ayush Gupta
-          </li>
-          <li className="list" data-filter="AB">
-            Akhilender bongawir
-          </li>
-          <li className="list" data-filter="CSN">
-            Chitta Sri Naga Sankara Pavana Saketh Ram
-          </li>
-          <li className="list" data-filter="Vish">
-            Vishal
-          </li>
-=======
     </div>
     <section>
         <ul>
@@ -76,7 +47,6 @@ const Gallery = () => {
             <li className="list" data-filter="AB">Akhilender Bongirwar</li>
             <li className="list" data-filter="CSN">Chitta Sri Naga Sankara Pavana Saketh Ram</li>
             <li className="list" data-filter="Vish">Vishal</li>
->>>>>>> 045557e436f3b7fa570f706b3870f6ccd8e8f27a
         </ul>
 
         <div className="Boys">
