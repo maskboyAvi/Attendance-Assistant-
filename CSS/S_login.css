@@ -14,9 +14,9 @@ body {
     background-image: linear-gradient(to right, #3282b8,#a9d5f6);
 }
 
-.T_login{
+/* .T_login{
     color: lemonchiffon;
-}
+} */
 
 .login-container {
     max-width: 450px;

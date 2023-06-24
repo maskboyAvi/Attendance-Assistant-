@@ -1,0 +1,123 @@
+.bdy-login{
+    /* margin: 100px 520px; */
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: linear-gradient(to right, #3282b8,#a9d5f6);
+}
+
+.main-login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container-login {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-login {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1b262c;
+}
+
+.S_login-login{
+    color: lemonchiffon;
+}
+
+.separator-login {
+    width: 150px;
+    height: 4px;
+    background-color: #0f4c75;
+    margin: 25px;
+    /* #843bc7 */
+}
+
+.welcome-message-login {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 28px;
+    margin-bottom: 30px;
+    color: #1b262c;
+}
+
+.login-form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control-login {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-control-login> input,button {
+    border: none;
+    outline: none;
+    color: #1b262c;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.form-control-login >input {
+    width: 100%;
+    background: #fff;
+    color: #1b262c;
+    letter-spacing: 0.5px;
+    padding: 14px 70px;
+}
+
+.icon-login {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbe1fa;
+    transition: color 0.4s;
+}
+
+input:focus ~ .icon-login {
+    color: #843bc7;
+}
+
+button.submit-login {
+    color: #fff;
+    padding: 14px 64px;
+    margin: 32px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+button.submit-login:hover {
+    opacity: 0.7;
+}
+
+/* ----  Responsiveness   ----  */
+/* @media (max-width: 780px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side {
+        display: none;
+    }
+} */
