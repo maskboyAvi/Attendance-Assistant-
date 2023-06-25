@@ -18,8 +18,8 @@ function Home() {
                 Still calling out each student's name in class?<br/>
                 You are just one click away.
             </p>
-            <a href="./Portal.html" className={hme["btn"]}>Start Now</a>
-            {/* <Link to="" className={hme["btn">Start Now</Link>]} */}
+            <Link to='/portals' className={hme["btn-home"]}>Start Now</Link>
+            {/* <Link to="" className={hme["btn-home">Start Now</Link>]} */}
         </div>
         <div className={hme["hero-pic"]}>
             <img src="./hero.png" alt="Hero_Image" />
@@ -88,7 +88,7 @@ function Home() {
         </div>
     </section>
     {/* Testimonials Section */}
-    <div className={hme["about-text test"]}>
+    <div className={hme["about-text","test"]}>
         <h4>&#183; Testimonials &#183;</h4>
     </div>
     <Testimonials />
@@ -96,7 +96,7 @@ function Home() {
     <section className={hme["contact"]} style={{backgroundImage:"url(/bgcontact.jpg)"}}>
         <div className={hme["contact-div"]}>
             <h2>Have a question?</h2>
-            <Link to="/contact" className={hme["btn talk"]}>Let's talk</Link>
+            <Link to="/contact" className={hme["btn-home"]}>Let's talk</Link>
         </div>
     </section>
     {/* Footer */}
