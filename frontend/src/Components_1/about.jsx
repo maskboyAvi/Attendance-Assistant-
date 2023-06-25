@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import aot from "./about.module.css";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -9,13 +9,13 @@ function AboutUs() {
   return (
     <>
     <Header />
-    <div className="section">
-      <div className="container">
-        <div className="content-section">
-          <div className="title">
+    <div className={aot["section"]}>
+      <div className={aot["container"]}>
+        <div className={aot["content-section"]}>
+          <div className={aot["title"]}>
             <h1>About Us</h1>
           </div>
-          <div className="content">
+          <div className={aot["content"]}>
             <h3>
               We are just a group of friends trying to make our teacher's life
               easier.
@@ -31,24 +31,24 @@ function AboutUs() {
               on this team to achieve the above-mentioned goal. Please click the
               below button to learn more about the members of this team.
             </p>
-            <div className="button">
+            <div className={aot["button"]}>
               <a href="./about1">Learn More</a>
             </div>
           </div>
-          <div className="social">
-            <a href="">
-              <i className="fab fa-facebook-f"></i>
+          <div className={aot["social"]}>
+            <a href="/">
+              <i className={aot["fab fa-facebook-f"]}></i>
             </a>
             <a href="">
-              <i className="fab fa-twitter"></i>
+              <i className={aot["fab fa-twitter"]}></i>
             </a>
             <a href="">
-              <i className="fab fa-instagram"></i>
+              <i className={aot["fab fa-instagram"]}></i>
             </a>
           </div>
         </div>
       </div>
-      <div className="image-section-logo">
+      <div className={aot["image-section-logo"]}>
         <img src={ClgLogo} alt="IIITL Logo" />
       </div>
     </div>
