@@ -1,7 +1,7 @@
 import React from 'react';
 import './SPortal.css';
 import myImageS from '../Images/std.png';
-import Header from './header';
+import NavPortal from './Nav-Portal';
 import Footer from './footer';
 
 function SPortal() {
@@ -30,7 +30,7 @@ function SPortal() {
 
   return (
     <>
-    <Header />
+    <NavPortal />
     <div className='main-div-sportal'>
       <h1 id="std">Welcome to Student Portal</h1>
 

@@ -10,6 +10,7 @@ import Portals from './Components_1/portals';
 import SLogin from './Components_1/s_login';
 import SPortal from './Components_1/SPortal';
 import TPortal from './Components_1/TPortal';
+import PhotoUpload from './Components_1/PhotoUpload';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/student-login" element={<SLogin/>} />
           <Route path="/student-portal" element={<SPortal/>} />
           <Route path="/teacher-portal" element={<TPortal/>} />
+          <Route path="/photoupload" element={<PhotoUpload/>} />
           <Route path="*" element={<Navigate to="/" />} /> {/* Default fallback route */}
         </Routes>
       </Router>

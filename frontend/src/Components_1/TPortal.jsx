@@ -1,7 +1,7 @@
 import React from 'react';
 import './TPortal.css';
 import myImageT from '../Images/teach.png';
-import Header from './header';
+import NavPortal from './Nav-Portal';
 import Footer from './footer';
 
 function TPortal() {
@@ -35,7 +35,7 @@ function TPortal() {
   }
   return (
     <>
-    <Header />
+    <NavPortal />
     <div className='main-div-tportal'>
       <h1 id="std">Welcome to Teacher  Portal</h1>
 
