@@ -7,6 +7,7 @@ import AboutUs1 from './Components_1/aboutUs';
 import Contact from './Components_1/contact';
 import Gallery from './Components_1/gallery';
 import Portals from './Components_1/portals';
+import SLogin from './Components_1/s_login';
 import SPortal from './Components_1/SPortal';
 import TPortal from './Components_1/TPortal';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/portals" element={<Portals />} />
+          <Route path="/student-login" element={<SLogin/>} />
           <Route path="/student-portal" element={<SPortal/>} />
           <Route path="/teacher-portal" element={<TPortal/>} />
           <Route path="*" element={<Navigate to="/" />} /> {/* Default fallback route */}

@@ -24,7 +24,7 @@ function App() {
       </a>
       <br />
       <br />
-      <Link to="/" className="p-btn">
+      <Link to="/student-login" className="p-btn">
         Student's Portal
         <span className='p-span'>
           <IoIosArrowForward />

@@ -29,7 +29,7 @@ section{
 .hero-text > p{
     margin-bottom: 40px;
 }
-.btn{
+.btn-home{
     display: inline-block;
     color: var(--secondary-text-color);
     border: 1.7px solid var(--secondary-text-color);
@@ -40,7 +40,7 @@ section{
     transition: all .5s ;
 
 }
-.btn:hover{
+.btn-home:hover{
     background-color: var(--secondary-text-color);
     color: var(--primary-text-color);
     transform:scale(1.1) translate3d(8px,-8px,8px);
@@ -270,19 +270,16 @@ section{
     text-align: center;
 }
 
-.contact .btn{
-    margin-top: .5rem;
+.contact .btn-home{
+    margin-top: 1.5rem;
     color: white;
     border: 2px solid white;
     font-weight: 600;
 }
-.contact .btn:hover{
+.contact .btn-home:hover{
     border: 4px solid white;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 600;
     transform:scale(0.9);
     background: transparent;
-}
-.talk{
-    margin-top: 1.5rem;
 }
