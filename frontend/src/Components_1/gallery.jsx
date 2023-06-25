@@ -9,6 +9,7 @@ import AK from '../Images/Main/Aviral.jpeg';
 import AG from '../Images/Main/Ayush.jpeg';
 import AB from '../Images/Main/Akhil.jpeg';
 import CSN from '../Images/Main/CSNPSR.jpeg';
+import Vish from '../Images/Main/Vishal.jpg';
 import Pic7 from '../Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.53 PM.jpeg';
 import Pic8 from '../Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.54 PM (1).jpeg';
 import Pic9 from '../Images/Equinox/WhatsApp Image 2023-03-10 at 10.28.55 PM (1).jpeg';
@@ -89,6 +90,13 @@ class PhotoGallery extends Component {
             >
               Chitta Sri Naga Sankara Pavana Saketh Ram
             </li>
+            <li
+              className={`list ${activeFilter === 'Vish' ? 'active' : ''}`}
+              onClick={() => this.handleFilterClick('Vish')}
+              data-filter="Vish"
+            >
+             Vishal
+            </li>
           </ul>
           <div className="Boys-gly Boys-upper-gly">
             <div
@@ -139,9 +147,20 @@ class PhotoGallery extends Component {
             >
               <img src={CSN} alt="Pic 6" />
             </div>
+            <div
+              className={`pic-gly item-gly pic7-gly ${
+                activeFilter === 'Vish' || activeFilter === 'all' ? 'active' : 'hide-gly'
+              }`}
+              data-item="Vish"
+            >
+              <img src={Vish} alt="Pic 7" />
+            </div>
           </div>
           <div className="Boys-gly">
-            <div className="h3-anime-gly">College Fest PICS [EQUINOX 2023]</div>
+              {
+                 activeFilter === 'all' && (
+                <div className="h3-anime-gly">College Fest PICS [EQUINOX 2023]</div>
+              )}
             <div className="seperator-gly"></div>
             <br />
             <div

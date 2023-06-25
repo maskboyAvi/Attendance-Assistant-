@@ -90,7 +90,7 @@
 }
 .section-gly > ul li{
     list-style: none;
-    background-color: #eee;
+    background-color: #5dd5fa;
     padding: 12px 20px;
     margin: 5px;
     letter-spacing: 1px;
@@ -99,7 +99,7 @@
 }
 .section-gly > ul li.active{
     background-color: var(--project-color-3);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .Boys-gly{
     display: flex;
@@ -146,7 +146,7 @@
     width: 200px;
     height: 3px;
     /* left: 50%; */
-    background-color: crimson;
+    background-color: rgb(238, 106, 133);
     transform: translateX(-50%);
     /* transform: translate(-50%,50%); */
     transform: translateY(50%);
@@ -179,7 +179,7 @@
     content:"";
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0%;
     text-align: center;
     transform: translate(-50%, -50%);
     color: white;
@@ -210,6 +210,9 @@
 .pic6-gly::before{
     content: "Chitta Sri Naga Sankara Pavana Saketh Ram";
 }
+.pic7-gly::before{
+    content: "Vishal";
+}
 .fun-gly::before{
     content: "EQUINOX";
 }
@@ -232,12 +235,14 @@
     opacity: 1;
 }
 .Boys-upper-gly{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem; */
+    display: flex;
+    justify-content: center;
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .Boys-upper-gly{
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
-}
+} */
