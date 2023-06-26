@@ -3,6 +3,7 @@ import './TPortal.css';
 import myImageT from '../Images/teach.png';
 import NavPortal from './Nav-Portal';
 import Footer from './footer';
+import TableComponent from './Table';
 
 function TPortal() {
 
@@ -18,45 +19,54 @@ function TPortal() {
     document.getElementById("code-T").innerHTML = result;
   }
 
-  function end() {
-    setTimeout(
-      () => {
-        document.getElementById("code").innerHTML = " ";
-      }, 10000
-    )
+  const end = () => {
+    fetch("http://localhost:8080/newday", {
+      method: 'POST',
+    })
+      .then(response => response.text())
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+
   }
 
   const ata = () => {
-    document.getElementById("atte").innerHTML="RollNo of Present Student : "
+    document.getElementById("atte").innerHTML = "RollNo of Present Student : "
     fetch("http://localhost:8080/check")
       .then(response => response.json())
-      .then(result =>  document.getElementById("atte").innerHTML += result)
+      .then(result => document.getElementById("atte").innerHTML += result)
       .catch(error => console.log('error', error));
   }
   return (
     <>
-    <NavPortal />
-    <div className='main-div-tportal'>
-      <h1 id="std">Welcome to Teacher  Portal</h1>
+      <NavPortal />
+      <div className='main-div-tportal'>
+        <h1 id="std">Welcome to Teacher  Portal</h1>
 
-      <div id="al" class="row">
-        <div class="col-6" >
-          <h1 style={{ marginBottom: "-1rem", marginLeft: "1rem" }}>Create Code </h1>
-          <button id="btn-t" onClick={create}>Create</button>
-          <button onclick={end} id="btn-2-t">Start Time</button>
-          <p id="code-T" style={{ marginLeft: "1rem" }}> </p>
+        <div id="al" class="row">
+          <div class="col-6" >
+            <h1 style={{ marginBottom: "-1rem", marginLeft: "1rem" }}>Create Code </h1>
+            <button id="btn-t" onClick={create}>Create</button>
+            <button onClick={end} id="btn-2-t">Start Time</button>
+            <p id="code-T" style={{ marginLeft: "1rem" }}> </p>
+          </div>
+          <div>
+            <img src={myImageT} alt="tec" id="tec" />
+          </div>
+
+        </div>
+        <button onClick={ata} id="btn-2-t">Check Attendance</button>
+        <div id="atte">
+
         </div>
         <div>
-          <img src={myImageT} alt="tec" id="tec" />
+          <TableComponent />
         </div>
-
       </div>
-      <button onClick={ata} id="btn-2-t">Check Attendance</button>
-      <div id="atte">
-       
-      </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
