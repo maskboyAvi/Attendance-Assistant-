@@ -5,7 +5,7 @@ import Aviral from "../Images/Main/Aviral.jpeg";
 import Akhil from "../Images/Main/Akhil.jpeg";
 import AKS from "../Images/Main/AKS.jpeg";
 import Ayush from "../Images/Main/Ayush.jpeg";
-import Atharva from "../Images/Main/Atharva.jpeg";
+import Atharva from "../Images/Main/Vishal.jpg";
 import Header from "./header";
 import Footer from "./footer";
 import abt from "./aboutUs.module.css";
@@ -66,7 +66,7 @@ function Team() {
             imageSrc={Ayush}
             name="Ayush Gupta"
             role="Co-Founder"
-            description="Also a hardworking a diligent person who doesn't let go of a concept until he fully grasps it."
+            description="A hardworking and diligent person who doesn't let go of a concept until he fully grasps it."
             email="ayush@gmail.com"
           />
         </div>
@@ -74,10 +74,10 @@ function Team() {
         <div className={abt["column"]}>
           <TeamCard
             imageSrc={Atharva}
-            name="Atharva Dudhe"
+            name="Vishal"
             role="Co-Founder"
-            description="A football lover who always does what he says he'll do. (Sticks by his word)"
-            email="atharva@gmail.com"
+            description="SANGEET PREMI -> A music lover who often remain lost in his music"
+            email="vishal@gmail.com"
           />
         </div>
       </div>
