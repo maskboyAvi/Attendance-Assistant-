@@ -44,6 +44,7 @@
     color: #777;
     display: block;
     transition: all 0.3s ease;
+    padding-left: 0;
 }
 .footer-col ul li a:hover{
     transform: translateX(10px);
@@ -71,35 +72,37 @@
     position: relative;
     display: flex;
     margin-top: 14px;
+    flex-wrap: wrap;
 }
 
 .svg-wrap a {
     border: 0;
-    padding: 0;
+    padding: 10px 0;
     display: flex;
-    color: #bbbbbb;
-    font-size: 16px;
+    color: #4b4a4a;
+    font-size: 24px;
     justify-content: center;
     align-items: center;
     font-style: italic;
+    opacity: 50%;
 }
 
 .svg-wrap a svg {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     fill: white;
     transition: fill 0.2s ease-in-out;
     margin-right: 12px;
 }
 
 .svg-wrap a:hover svg {
-    fill: #16f1dc;
+    fill: white;
     cursor: pointer;
 }
 
 .svg-wrap a:hover {
     background-color: transparent;
-    color: #16f1dc;
+    opacity: 100%;
     cursor: pointer;
 }
 @media (max-width: 850px) {
