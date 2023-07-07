@@ -98,6 +98,9 @@
     cursor: pointer;
     font-weight: bolder;
 }
+.section-gly > ul li:hover{
+    background-color: #3282b8;
+}
 .section-gly > ul li.active{
     background-color: var(--project-color-3);
     color: rgb(255, 255, 255);

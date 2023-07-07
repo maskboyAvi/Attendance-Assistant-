@@ -103,9 +103,9 @@
     margin: 0px;
   }
   .about-img{
-    border-radius: 50%;
+    border-radius: 80%;
     /* width: 100px; */
-    height: 450px;
+    height: 500px;
   }
   .about-h2{
     margin-top: 20px;
