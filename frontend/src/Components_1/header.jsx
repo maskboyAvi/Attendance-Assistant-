@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
-import './header.css';
+import HeaderCss from'./header.module.css';
 
 import logo from '../Images/logo.png';
 
@@ -32,9 +32,9 @@ const Header = () => {
   return (
     <NavigationContext.Provider value={location.pathname}>
       <header>
-        <nav className="navbar">
-          <div className="navbar-container">
-            <a href="/" className="navbar-logo">
+        <nav className={HeaderCss.navbar}>
+          <div className={HeaderCss['navbar-container']}>
+            <a href="/" className={HeaderCss['navbar-logo']}>
               <img src={logo} alt="Logo" className="navbar-logo-img" />
             </a>
             {isMobile ? (

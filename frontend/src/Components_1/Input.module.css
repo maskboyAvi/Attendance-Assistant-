@@ -1,0 +1,140 @@
+/* .inputbox {
+    position: relative;
+    width: 196px;
+  }
+  
+  .inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  .inputbox input:valid ~span,
+  .inputbox input:focus ~span {
+    color: #5748f2;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0,75em;
+  }
+  
+  .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #5748f2;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+  
+  .inputbox input:valid ~i,
+  .inputbox input:focus ~i {
+    height: 44px;
+  } */
+
+
+
+  form {
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-text-color:#09aff4;
+    --project-color-1: #1b262c;
+    --project-color-2: #0f4c75;
+    --project-color-3: #3282b8;
+    --project-color-4: #bbe1fa;
+    --clr-dark-blue: #060922;
+    --bg-light: #efefef;
+    --bg-dark: #707070;
+    --clr: #58BC82;
+    --clr-alpha: #9c9c9c60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+  }
+  
+  .form .input-span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  form input[type="email"],
+  form input[type="text"],
+  form input[type="password"] {
+    border-radius: 0.5rem;
+    padding: 1rem 0.75rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-alpha);
+    outline: 2px solid var(--project-color-2);
+    color: var(--clr-dark-blue);
+  }
+  form input[type="text"]:focus{
+    outline: 3px solid var(--secondary-text-color);
+    color: var(--bg-light);
+  }
+  .label {
+    align-self: flex-start;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+  }
+  
+  form .submit {
+    padding: 1rem 0.75rem;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: .9rem;
+    width: 80%;
+    margin: auto;
+  }
+  
+  form .submit:hover {
+    background-color: var(--project-color-3);
+    color: var(--bg-light);
+  }
+  
+  .span {
+    text-decoration: none;
+    color: var(--bg-dark);
+  }
+  
+  .span a {
+    color: var(--project-color-2);
+  }
+  .span a:hover{
+    color: var(--project-color-3);
+  }

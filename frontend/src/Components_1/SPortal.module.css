@@ -1,10 +1,63 @@
+section{
+    padding: 50px 13%;
+}
+.hero{
+    margin-top: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px,auto));
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+.hero-pic img{
+    max-width: 100%;
+    min-width: 350px;
+    width: 70%;
+    height: auto;
+    max-height: 400px;
+}
+.hero-text h1{
+    font-size: var(--big-font);
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+.hero-text > h4{
+    color: var(--secondary-text-color);
+    font-size: var(--h4-font);
+    margin-bottom: 5px;
+}
+.hero-text > p{
+    margin-bottom: 40px;
+}
+.btn-home{
+    display: inline-block;
+    color: var(--secondary-text-color);
+    border: 1.7px solid var(--secondary-text-color);
+    padding: 10px 30px;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transition: all .5s ;
+
+}
+.btn-home:hover{
+    background-color: var(--secondary-text-color);
+    color: var(--primary-text-color);
+    transform:scale(1.1) translate3d(8px,-8px,8px);
+    font-weight: 600;
+}
 #std {
     margin: 50px;
     margin-top: 10rem;
     margin-left: 500px;
-    color: white;
+    color:red;
 }
-
+.stud-heading{
+    color: var(--secondary-text-color);
+    font-size: var(--h4-font);
+    margin: 10px;
+    text-align: center;
+}
 #btn-s {
     border-radius: 40%;
     height: 50px;
@@ -17,11 +70,16 @@
     text-align: center;
     opacity: 0.8;
 }
-
 #btn-s:hover {
   opacity: 1;
 }
-
+.stud-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px auto;
+    justify-content: center;
+    align-items: center;
+}
 #in1-s,
 #in2-s {
     height: 30px;
@@ -36,13 +94,9 @@
     margin-bottom: 10rem;
     color: wheat;
 }
-
 .main-div-sportal{
-
-    background-image: url("../../public/bgcontact.jpg");
-    font-family: "Poppins";
+    padding: 10vh 5vw;
 }
-
 #stdu {
     width: 40rem;
     height: 40rem;
@@ -51,7 +105,9 @@
     border-radius: 0%;
     
 }
+.stud-heading{
 
+}
 @media (max-width: 850px) {
     .footer-col {
         width: 50%;
