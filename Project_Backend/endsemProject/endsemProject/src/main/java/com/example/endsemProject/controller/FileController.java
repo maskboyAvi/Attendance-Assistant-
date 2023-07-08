@@ -23,7 +23,7 @@ import org.springframework.http.HttpHeaders;
 
 @RestController
 @RequestMapping("/fileresource")
-// @CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="http://localhost:3000")
 public class FileController {
 	@Autowired 
 	private Fileserviceimpl fileserviceimpl ;

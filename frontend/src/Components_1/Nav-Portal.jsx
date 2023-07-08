@@ -9,6 +9,7 @@ import logo from "../Images/logo.png"
 
 var ssitem=sessionStorage.getItem("email");
 
+
 const NavPortal = () => {
     
     
@@ -33,7 +34,7 @@ const NavPortal = () => {
     const [imageData, setImageData] = useState('');
 
     const handleImageFetch = () => {
-      axios.get(`http://localhost:8080/fileresource/download/saketh`,{timeout: 5000}, {responseType: 'arraybuffer' })
+      axios.get(`http://localhost:8080/fileresource/download/${ssitem}`, {responseType: 'arraybuffer' })
         .then(response => {
           const base64Image = btoa(
             new Uint8Array(response.data).reduce(
