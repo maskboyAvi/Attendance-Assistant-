@@ -3,6 +3,12 @@ import  { useState, useEffect } from 'react';
 
 import './PhotoUpload.css';
 
+sessionStorage.setItem("email",'aviral')
+
+var ssitem=sessionStorage.getItem("email");
+
+
+
 const PhotoUpload = () => {
   const fileInputRef = useRef(null);
 //   const [imgData,setImgData]=useState('');
@@ -15,7 +21,7 @@ const PhotoUpload = () => {
     const formData = new FormData();
     formData.append('file', file);
 
-    fetch('http://localhost:8080/fileresource/upload/'+imid, {
+    fetch(`http://localhost:8080/fileresource/upload/${ssitem}`, {
       method: 'POST',
       body: formData
     })

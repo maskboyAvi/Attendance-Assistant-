@@ -7,6 +7,8 @@ import PhotoUpload from './PhotoUpload';
 import logo from "../Images/logo.png"
 // import logo from '../Images/logo.png'
 
+var ssitem=sessionStorage.getItem("email");
+
 const NavPortal = () => {
     
     
@@ -35,7 +37,7 @@ const NavPortal = () => {
     const [imageData, setImageData] = useState('');
 
     const handleImageFetch = () => {
-      axios.get(`http://localhost:8080/fileresource/download/aviral@gmail.com`, {responseType: 'arraybuffer' })
+      axios.get(`http://localhost:8080/fileresource/download/${ssitem}`, {responseType: 'arraybuffer' })
         .then(response => {
           const base64Image = btoa(
             new Uint8Array(response.data).reduce(
@@ -146,8 +148,7 @@ const NavPortal = () => {
                                         }}  className="dropbtn-portal">Account</a>
                                         <div id="myDropdown" class="dropdown-content">
                                             <img src={imageData} alt="accimg" id="accimg" />
-                                            <p className="accname">AKSawant2023</p>
-                                            <p className="accname">LCS2022005</p>
+                                            <p className="accname">{ssitem}</p>
                                             <a id='log-Portal' href='/photoupload'>Edit Profile</a>
                                             <button id='log'>LogOut</button>
                                         </div>
