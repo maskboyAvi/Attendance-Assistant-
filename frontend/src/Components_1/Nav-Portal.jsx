@@ -4,7 +4,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import './Nav-Portal.css';
 import PhotoUpload from './PhotoUpload';
-
+import logo from "../Images/logo.png"
 // import logo from '../Images/logo.png'
 
 const NavPortal = () => {
@@ -84,7 +84,7 @@ const NavPortal = () => {
                 <nav className="navbar">
                     <div className="navbar-container">
                         <a href="/" className="navbar-logo">
-                            <img src='' alt="Logo" className='navbar-logo-img' />
+                            <img src={logo} alt="Logo" className='navbar-logo-img' />
                         </a>
                         {isMobile ? (
                             <>

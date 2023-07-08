@@ -1,5 +1,5 @@
 import React from 'react';
-import './TPortal.css';
+import SPortalCss from "./SPortal.module.css";
 import myImageT from '../Images/teach.png';
 import NavPortal from './Nav-Portal';
 import Footer from './footer';

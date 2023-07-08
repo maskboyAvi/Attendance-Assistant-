@@ -96,6 +96,9 @@ section{
 }
 .main-div-sportal{
     padding: 10vh 5vw;
+    /* background-image: linear-gradient(135deg,var(--clr-dark-blue)70%,#8b33c5); */
+    background-image: linear-gradient(-35deg,var(--clr-dark-blue)70%,#8b33c5);
+
 }
 #stdu {
     width: 40rem;
