@@ -28,11 +28,11 @@
 
 .title {
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 1px;
-    color: #1b262c;
+    letter-spacing: 5px;
+    color: #2f4957;
 }
 
 .separator {
@@ -77,6 +77,7 @@ input {
     color: #1b262c;
     letter-spacing: 0.5px;
     padding: 14px 70px;
+    text-align: center;
 }
 
 input ~ i {
@@ -108,9 +109,23 @@ button.submit:hover {
     opacity: 0.7;
 }
 
-.icon{
-    fill: black;
-}
+/* Assuming 'slng' is the CSS module object for the component */
+
+/* Apply display: none; to hide the icons by default */
+/* Assuming 'slng' is the CSS module object for the component */
+
+/* Initially, set visibility: visible for the icons */
+.icon {
+    visibility: visible;
+    left: 10%;
+  }
+  
+  /* When the input field has a non-empty value, set visibility: hidden to hide the icon */
+  .form-control input:not(:placeholder-shown) + .icon {
+    visibility: hidden;
+  }
+  
+  
 
 /* ----  Responsiveness   ----  */
 /* @media (max-width: 780px) {
