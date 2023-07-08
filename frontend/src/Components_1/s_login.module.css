@@ -17,7 +17,9 @@
 .T_login{
     color: lemonchiffon;
 }
-
+.T_login:hover{
+    color: white;
+}
 .login-container {
     max-width: 450px;
     padding: 24px;
@@ -93,7 +95,7 @@ input:focus ~ i {
     color: #843bc7;
 }
 
-button.submit {
+.submit {
     color: #fff;
     padding: 14px 64px;
     margin: 32px auto;
@@ -105,7 +107,7 @@ button.submit {
     transition: opacity 0.4s;
 }
 
-button.submit:hover {
+.submit:hover {
     opacity: 0.7;
 }
 

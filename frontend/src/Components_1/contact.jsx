@@ -2,8 +2,15 @@ import React from 'react'
 import cnt from './contact.module.css'
 import Header from './header'
 import Footer from './footer'
+import { useNavigate } from 'react-router-dom'
 
 function Contact() {
+    const navigate = useNavigate();
+    const handleSubmit = () =>{
+        navigate('/');
+    }
+
+
   return (
     <>
     <Header/>
@@ -32,7 +39,7 @@ function Contact() {
             </div>
             <div className={cnt["form-cts"]}>
                 <h1>Get In Touch</h1>
-                <form method="post" id="feedbackForm" autocomplete="on">
+                <form method="post" id="feedbackForm" autocomplete="on" onSubmit={handleSubmit}>
                     <div className={cnt["flex-rev-cts"]}>
                       <input type="name" placeholder="Name" name="fullname" id="name" required onkeypress="return validName(event.charCode)" />
                       <label for="name">Full Name</label>
