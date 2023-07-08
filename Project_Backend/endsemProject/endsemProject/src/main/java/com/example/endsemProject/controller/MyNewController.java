@@ -11,7 +11,7 @@ import com.example.endsemProject.model.SignUpModel.StudentModel;
 import com.example.endsemProject.model.SignUpModel.TeacherModel;
 import com.example.endsemProject.service.MyService;
 
-@CrossOrigin(origins="http://127.0.0.1:5500")
+@CrossOrigin(origins="http://localhost:3000")
 @RestController
 public class MyNewController {
 	@Autowired

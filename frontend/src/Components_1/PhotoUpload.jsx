@@ -3,7 +3,7 @@ import  { useState, useEffect } from 'react';
 
 import './PhotoUpload.css';
 
-sessionStorage.setItem("email",'aviral')
+sessionStorage.setItem("email",'saketh')
 
 var ssitem=sessionStorage.getItem("email");
 

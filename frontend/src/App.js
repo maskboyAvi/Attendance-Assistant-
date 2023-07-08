@@ -12,6 +12,7 @@ import SPortal from './Components_1/SPortal';
 import TPortal from './Components_1/TPortal';
 import PhotoUpload from './Components_1/PhotoUpload';
 import TLogin from './Components_1/TLogin';
+import Signup from './Components_1/signup';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/portals" element={<Portals />} />
           <Route path="/student-login" element={<SLogin/>} />
           <Route path="/teacher-login" element={<TLogin />} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path="/student-portal" element={<SPortal/>} />
           <Route path="/teacher-portal" element={<TPortal/>} />
           <Route path="/photoupload" element={<PhotoUpload/>} />

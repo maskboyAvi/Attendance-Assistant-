@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import slng from './s_login.module.css';
 import { Link } from 'react-router-dom';
 import { FaUser,FaLock } from 'react-icons/fa';
+import axios from 'axios';
 
 function SLogin() {
   const [email, setEmail] = useState('');
@@ -75,9 +76,9 @@ function SLogin() {
             {/* <i className="fas fa-lock"></i> */}
             <i className={slng['icon']}><FaLock/></i>
           </div>
-          <button className={slng.submit} onClick={handleLogin}>
+          <Link to="/student-portal" className={slng.submit} onClick={handleLogin}>
             Login
-          </button>
+          </Link>
         </form>
         <p className={slng.signup}>
           New User? <a href="./Signup.html">Sign up</a>

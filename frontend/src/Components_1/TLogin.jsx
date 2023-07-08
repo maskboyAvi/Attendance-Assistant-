@@ -75,9 +75,9 @@ function TLogin() {
             {/* <i className="fas fa-lock"></i> */}
             <i className={slng['icon']}><FaLock/></i>
           </div>
-          <button className={slng.submit} onClick={handleLogin}>
+          <Link to="/teacher-portal" className={slng.submit} onClick={handleLogin}>
             Login
-          </button>
+          </Link>
         </form>
         <p className={slng.signup}>
           New User? <a href="./Signup.html">Sign up</a>

@@ -16,12 +16,12 @@ function App() {
       </div>
       <div className="p-separator"></div>
       <div className="p-sliders">
-      <a href="./T_login.html" className="p-btn">
+      <Link to="/teacher-login" href="./T_login.html" className="p-btn">
         Teacher's Portal
         <span className='p-span'>
           <IoIosArrowForward />
         </span>
-      </a>
+      </Link>
       <br />
       <br />
       <Link to="/student-login" className="p-btn">
@@ -32,7 +32,7 @@ function App() {
       </Link>
       <br />
       <br />
-      <Link to="/" className="p-btn">
+      <Link to="/signup" className="p-btn">
         New User Sign Up
         <span className='p-span'>
           <IoIosArrowForward />

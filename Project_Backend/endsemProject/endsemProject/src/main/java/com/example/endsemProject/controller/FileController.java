@@ -89,6 +89,7 @@ public class FileController {
 		            .headers(headers)
 		            .body(resource);
 		}
+
 	  @PutMapping("/upload/{email}")
 	  public String updateemail(@PathVariable String email, @RequestParam("file") MultipartFile file) {
 	      try {
