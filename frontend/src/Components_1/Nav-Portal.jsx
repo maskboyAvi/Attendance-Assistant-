@@ -17,10 +17,6 @@ const NavPortal = () => {
        
     };
 
-   
-    
-
-
     window.onclick = function (event) {
         if (!event.target.matches('.dropbtn-portal')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");

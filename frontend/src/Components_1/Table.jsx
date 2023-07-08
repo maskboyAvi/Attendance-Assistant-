@@ -31,7 +31,7 @@ const TableComponent = () => {
             <tr key={index}>
               <td>{item.column}</td>
               {item.values.map((value, rowIndex) => (
-                <td key={rowIndex}>{value}</td>
+                <td key={rowIndex} style={{backgroundColor:value===1?'green':'red'}}>{value}</td>
               ))}
             </tr>
           ))}
