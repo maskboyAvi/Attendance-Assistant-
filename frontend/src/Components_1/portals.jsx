@@ -1,5 +1,6 @@
 import React from 'react';
 import './portals.css';
+import pstyles from './portals.module.css';
 import Header from './header';
 import Footer from './footer';
 import { Link } from 'react-router-dom';
@@ -9,32 +10,35 @@ function App() {
   return (
     <>
     <Header />
-    <body className='p-body'>
-    <div className="p-sec">
+    <body className= {pstyles['p-body']}>
+    <div className= {pstyles["p-sec"]}>
       <div>
-        <p className="p-head">Hello User</p>
+        <p className= {pstyles["p-head"]}>Hello User</p>
       </div>
-      <div className="p-separator"></div>
-      <div className="p-sliders">
-      <Link to="/auth" href="./T_login.html" className="p-btn">
+      <div className= {pstyles["p-separator"]}></div>
+      <div className= {pstyles["p-sliders"]}>
+
+      <Link to="/auth" href="./T_login.html" className= {pstyles["p-btn"]}>
         Teacher's Portal
-        <span className='p-span'>
+        <span className= {pstyles['p-span']}>
           <IoIosArrowForward />
         </span>
       </Link>
       <br />
       <br />
-      <Link to="/auth" className="p-btn">
+
+      <Link to="/auth" className= {pstyles["p-btn"]}>
         Student's Portal
-        <span className='p-span'>
+        <span className= {pstyles['p-span']}>
           <IoIosArrowForward />
         </span>
       </Link>
       <br />
       <br />
-      <Link to="/auth" className="p-btn">
+
+      <Link to="/auth" className= {pstyles["p-btn"]}>
         New User Sign Up
-        <span className='p-span'>
+        <span className= {pstyles['p-span']}>
           <IoIosArrowForward />
         </span>
       </Link>

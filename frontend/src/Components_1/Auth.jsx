@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 // import "../App.css"
 import "./Auth.css"
+import "bootstrap/dist/css/bootstrap.min.css"
+import astyles from "./Auth.module.css"
 import axios from "axios"
 import bcrypt from 'bcryptjs';
 
@@ -108,40 +110,40 @@ export default function (props) {
 
   if (authMode === "signin") {
     return (
-      <div className="Auth-form-container">
-        <form className="Auth-form">
-          <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
-            <div className="text-center">
+      <div className= {astyles["Auth-form-container"]}>
+        <form className= {astyles["Auth-form"]}>
+          <div className= {astyles["Auth-form-content"]}>
+            <h3 className= {astyles["Auth-form-title"]}>Sign In</h3>
+            <div className=  {astyles["text-center"]}>
               Not registered yet?{" "}
-              <span className="link-primary" onClick={changeAuthMode}>
+              <button className= {astyles["link-primary"]} onClick={changeAuthMode}>
                 Sign Up
-              </span>
+              </button>
             </div>
-            <div className="form-group mt-3">
+            <div className= {astyles["form-group mt-3"]}>
               <label>Email address</label>
               <input
                 onChange={handleSigninChange}
                 name="email"
                 type="email"
-                className="form-control mt-1"
+                className= {astyles["form-control mt-1"]}
                 placeholder="Enter email"
               />
             </div>
-            <div className="form-group mt-3">
+            <div className= {astyles["form-group mt-3"]}>
               <label>Password</label>
               <input
                 onChange={handleSigninChange}
                 name="password"
                 type="password"
-                className="form-control mt-1"
+                className= {astyles["form-control mt-1"]}
                 placeholder="Enter password"
               />
             </div>
-            <div className="form-group mt-3">
+            <div className= {astyles["form-group mt-3"]}>
               <label>Profession</label>
               <select
-                className="form-control mt-1"
+                className= "form-control mt-1"
                 name="profession"
                 id="profession"
                 onChange={handleSigninChange}
@@ -152,11 +154,11 @@ export default function (props) {
             </select>
           </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary" onClick={handleSignin}>
+              <button type="submit" className= "btn-1 btn-primary" onClick={handleSignin}>
                 Submit
               </button>
             </div>
-            <p className="text-center mt-2">
+            <p className= "text-center mt-2">
               Forgot <a href="#">password?</a>
             </p>
           </div>
@@ -166,13 +168,13 @@ export default function (props) {
   }
 
   return (
-    <div className="Auth-form-container">
-      <form className="Auth-form">
-        <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign Up</h3>
-          <div className="text-center">
+    <div className= {astyles["Auth-form-container"]}>
+      <form className= {astyles["Auth-form"]}>
+        <div className= {astyles["Auth-form-content"]}>
+          <h3 className= {astyles["Auth-form-title-1"]}>Sign Up</h3>
+          <div className= {astyles["text-center"]}>
             Already registered?{" "}
-            <span className="link-primary" onClick={changeAuthMode}>
+            <span className= "link-primary-1" onClick={changeAuthMode}>
               Sign In
             </span>
           </div>
@@ -240,7 +242,7 @@ export default function (props) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
+            <button type="submit" className="btn-2 btn-primary" onClick={handleSubmit}>
               Submit
             </button>
           </div>
