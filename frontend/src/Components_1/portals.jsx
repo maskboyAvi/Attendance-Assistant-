@@ -16,7 +16,7 @@ function App() {
       </div>
       <div className="p-separator"></div>
       <div className="p-sliders">
-      <Link to="/teacher-login" href="./T_login.html" className="p-btn">
+      <Link to="/auth" href="./T_login.html" className="p-btn">
         Teacher's Portal
         <span className='p-span'>
           <IoIosArrowForward />
@@ -24,7 +24,7 @@ function App() {
       </Link>
       <br />
       <br />
-      <Link to="/student-login" className="p-btn">
+      <Link to="/auth" className="p-btn">
         Student's Portal
         <span className='p-span'>
           <IoIosArrowForward />
@@ -32,7 +32,7 @@ function App() {
       </Link>
       <br />
       <br />
-      <Link to="/signup" className="p-btn">
+      <Link to="/auth" className="p-btn">
         New User Sign Up
         <span className='p-span'>
           <IoIosArrowForward />
