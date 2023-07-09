@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import SPortalCss from "./SPortal.module.css";
 import myImageT from "../Images/teach.png";
 import NavPortal from "./Nav-Portal";
@@ -8,6 +8,25 @@ import TableComponent from "./Table";
 import studImg from "../Images/SPortal_stud.png";
 import inputCss from "./Input.module.css";
 function TPortal() {
+  let [details, setDetails] = useState({
+    code: "",
+    rollNo: "",
+  });
+  let { code, rollNo } = details;
+  useEffect(() => {
+    const jwt = sessionStorage.getItem("jwt");
+    if (jwt === "false") {
+      alert("Please login");
+      window.location.href = "/auth";
+    }
+  }, []);
+
+  const handleSignin = (e) => {
+    e.preventDefault();
+    console.log(code);
+    console.log(rollNo);
+  };
+
   function create() {
     let result = "";
     const characters =
@@ -88,6 +107,7 @@ function TPortal() {
                   </button>
                   <span class={inputCss["input-span"]}>
                     <input
+                      onChange={handleChangeCode}
                       type="text"
                       name="code"
                       id="code-T"

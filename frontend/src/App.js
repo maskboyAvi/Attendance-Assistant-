@@ -8,11 +8,9 @@ import AboutUs1 from './Components_1/aboutUs';
 import Contact from './Components_1/contact';
 import Gallery from './Components_1/gallery';
 import Portals from './Components_1/portals';
-import SLogin from './Components_1/s_login';
 import SPortal from './Components_1/SPortal';
 import TPortal from './Components_1/TPortal';
 import PhotoUpload from './Components_1/PhotoUpload';
-import TLogin from './Components_1/TLogin';
 import Signup from './Components_1/signup';
 import Auth from './Components_1/Auth';
 

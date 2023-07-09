@@ -5,6 +5,8 @@ import axios from "axios"
 import bcrypt from 'bcryptjs';
 
 export default function (props) {
+  // let navigate=useNavigate("/auth")
+  sessionStorage.setItem("jwt", "false")
   let [authMode, setAuthMode] = useState("signin")
   let [details, setDetails] = useState({
     name: "",
@@ -34,6 +36,8 @@ export default function (props) {
           password: signinDetails.password,
         }).then((res) => {
           console.log(res.data)
+          sessionStorage.setItem("jwt", res.data.jwtToken)
+          window.location.href = "/student-portal"
         }).catch((err) => {
           console.log(err)
         })
@@ -43,6 +47,8 @@ export default function (props) {
           password: signinDetails.password,
         }).then((res) => {
           console.log(res.data)
+          sessionStorage.setItem("jwt", res.data.jwtToken)
+          window.location.href = "/teacher-portal"
         }).catch((err) => {
           console.log(err)
         })
@@ -74,6 +80,7 @@ export default function (props) {
             rollNo,
           }).then((res) => {
             console.log(res.data,res.status)
+            setAuthMode("signin")
           }).catch((err) => {
             console.log(err)
           })
@@ -86,6 +93,7 @@ export default function (props) {
             rollNo,
           }).then((res) => {
             console.log(res.data)
+            setAuthMode("signin")
           }).catch((err) => {
             console.log(err)
           })

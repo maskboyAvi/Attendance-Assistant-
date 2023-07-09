@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SPortalCss from "./SPortal.module.css";
 import NavPortal from "./Nav-Portal";
 import Footer from "./footer";
 import InputPort from "./InputPort";
 import studImg from "../Images/SPortal_stud.png";
 import inputCss from "./Input.module.css";
+
 function SPortal() {
+  useEffect(() => {
+    const jwt = sessionStorage.getItem("jwt");
+    if (jwt === "false") {
+      alert("Please login");
+      window.location.href = "/auth";
+    }
+  }, []);
+
   function mypost() {
     const id = document.getElementById("in1-s").value;
     const na = document.getElementById("in2-s").value;
@@ -51,26 +60,26 @@ function SPortal() {
             <h1 className={SPortalCss["stud-heading"]}>
               &#183; GIVE ATTENDANCE &#183;
             </h1>
-            <form class={inputCss.form}>
-              <span class={inputCss["input-span"]}>
-                <label for="in1-s" class={inputCss.label}>
+            <form className={inputCss.form}>
+              <span className={inputCss["input-span"]}>
+                <label htmlFor="in1-s" className={inputCss.label}>
                   Enter RollNo:
                 </label>
                 <input type="text" name="rollNo" id="in1-s" />
               </span>
-              <span class={inputCss["input-span"]}>
-                <label for="in2-s" class={inputCss.label}>
+              <span className={inputCss["input-span"]}>
+                <label htmlFor="in2-s" className={inputCss.label}>
                   Enter Code:
                 </label>
                 <input type="text" name="code" id="in2-s" />
               </span>
-              <span class={inputCss.span}>
+              <span className={inputCss.span}>
                 <a href="#">How to Get Code?</a>
               </span>
-              <button class={inputCss.submit} onClick={mypost}>
+              <button className={inputCss.submit} onClick={mypost}>
                 Submit
               </button>
-              {/* <span class={inputCss.span}>
+              {/* <span className={inputCss.span}>
                 Don't have an account? <a href="#">Sign up</a>
               </span> */}
             </form>
