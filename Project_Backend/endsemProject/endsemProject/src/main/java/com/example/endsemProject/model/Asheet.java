@@ -12,6 +12,22 @@ private Long id;
 @Column(unique = true)
 private String rollNo;
 
+private int _10_07_2023;
+
+public int get_10_07_2023() {
+	return _10_07_2023;
+}
+
+public void set_10_07_2023(int _10_07_2023) {
+	this._10_07_2023 = _10_07_2023;
+}
+
+public Asheet(Long id, String rollNo, int _10_07_2023) {
+	this.id = id;
+	this.rollNo = rollNo;
+	this._10_07_2023 = _10_07_2023;
+}
+
 public Asheet(String rollNo) {
 	this.rollNo = rollNo;
 }

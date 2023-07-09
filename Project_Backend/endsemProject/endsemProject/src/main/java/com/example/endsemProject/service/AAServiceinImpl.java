@@ -59,6 +59,12 @@ public class AAServiceinImpl {
     String alterTableQuery = "ALTER TABLE asheet ADD " + columnName + " VARCHAR(255)";
     entityManager.createNativeQuery(alterTableQuery).executeUpdate();
     }
+
+	public Asheet getByRollNo(String rollno) {
+		return servicein1.getByRollNo(rollno);
+	 }
+
+    
 	
 	
 

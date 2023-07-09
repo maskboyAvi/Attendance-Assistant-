@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import SPortalCss from "./SPortal.module.css";
 import myImageT from "../Images/teach.png";
 import NavPortal from "./Nav-Portal";
@@ -8,6 +8,8 @@ import TableComponent from "./Table";
 import studImg from "../Images/SPortal_stud.png";
 import inputCss from "./Input.module.css";
 function TPortal() {
+  const [code1 , setCode] = useState(''); 
+  const [roll, setRoll]  = useState('');
   let [details, setDetails] = useState({
     code: "",
     rollNo: "",
@@ -37,24 +39,30 @@ function TPortal() {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
     }
+    console.log(result);
+     setCode(result);
     // document.getElementById("code-T").innerHTML = result;
     var inputElement = document.getElementById("code-T");
     inputElement.disabled = false; // Remove the disabled attribute temporarily
+    
     inputElement.value = result; // Update the value
     inputElement.disabled = true; // Reapply the disabled attribute
   }
 
   const end = () => {
-    fetch("http://localhost:8080/newday", {
+    const jwt =sessionStorage.getItem("jwt");
+    
+    fetch("http://localhost:8080/addcode", {
       method: "POST",
-    })
-      .then((response) => response.text())
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
+      body: JSON.stringify({
+        rollno: roll,
+        code: code1,
+      }),
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json;",
+      },
+    });
   };
 
   const ata = () => {
@@ -93,10 +101,18 @@ function TPortal() {
           <section>
             <div className={SPortalCss["stud-content"]}>
               <h1 className={SPortalCss["stud-heading"]}>
+
                 &#183; TAKE ATTENDANCE &#183;
               </h1>
               <form class={inputCss.form}>
-                
+              <span className={inputCss["input-span"]}>
+                <label htmlFor="in1-s" className={inputCss.label}>
+                  Enter RollNo:
+                </label>
+                <input type="text" onChange={(e)=>{
+                  setRoll(e.target.value);
+                }} name="rollNo" id="in1-s" />
+              </span>
                 <div className={SPortalCss["btn-manage-sp"]}>
                   <button
                     class={inputCss.submit}
@@ -106,16 +122,18 @@ function TPortal() {
                     Create Code
                   </button>
                   <span class={inputCss["input-span"]}>
+
                     <input
-                      onChange={handleChangeCode}
                       type="text"
                       name="code"
                       id="code-T"
-                      value={"Eg. 3FTc8d"}
+                      placeholder="A3Se"
+                      value={code1}
                       disabled
                       style={divStyle}
                     />
                   </span>
+
                 </div>
                 <button class={inputCss.submit} onClick={end} type="button">
                   Start Attendance
