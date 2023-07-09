@@ -7,8 +7,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.endsemProject.model.Student;
+
+import jakarta.persistence.EntityManager;
+
 import com.example.endsemProject.model.Asheet;
 
 
@@ -19,6 +23,9 @@ public class AAServiceinImpl {
 	private Servicein servicein;
 	@Autowired 
 	private Servicein1 servicein1;
+	@Autowired
+	private EntityManager entityManager;
+
 	
 	public List<String> checkAttendace(){
 		List<Student> emp = new ArrayList<>();
@@ -52,6 +59,13 @@ public class AAServiceinImpl {
 		});
 		return li;
 	}
+	
+	@Transactional
+    public void addDynamicColumn(String columnName) {
+    String alterTableQuery = "ALTER TABLE asheet ADD " + columnName + " VARCHAR(255)";
+    entityManager.createNativeQuery(alterTableQuery).executeUpdate();
+    }
+	
 	
 
 }
