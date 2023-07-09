@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import './Nav-Portal.css';
+import navstyle from './Nav-portal.module.css'
 import PhotoUpload from './PhotoUpload';
 import logo from "../Images/logo.png"
 // import logo from '../Images/logo.png'
@@ -24,8 +25,8 @@ const NavPortal = () => {
             var i;
             for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+                if (openDropdown.classList.contains(navstyle['show'])) {
+                    openDropdown.classList.remove(navstyle['show']);
                 }
             }
         }
@@ -69,43 +70,43 @@ const NavPortal = () => {
 
     const handleToggleMenu = () => {
         const navMenu = document.getElementById('nav_menu');
-        navMenu.classList.toggle('show');
+        navMenu.classList.toggle(navstyle['show']);
     };
 
     const handleCloseMenu = () => {
         const navMenu = document.getElementById('nav_menu');
-        navMenu.classList.remove('show');
+        navMenu.classList.remove(navstyle['show']);
     };
 
     return (
         <>
             <header>
-                <nav className="navbar">
-                    <div className="navbar-container">
-                        <a href="/" className="navbar-logo">
-                            <img src={logo} alt="Logo" className='navbar-logo-img' />
+                <nav className={navstyle["navbar"]}>
+                    <div className={navstyle["navbar-container"]}>
+                        <a href="/" className={navstyle["navbar-logo"]}>
+                            <img src={logo} alt="Logo" className={navstyle['navbar-logo-img']} />
                         </a>
                         {isMobile ? (
                             <>
-                                <nav className="nav" id="nav_menu">
-                                    <FiX className="header_close" id="close_menu" onClick={handleCloseMenu} />
-                                    <ul className="nav_list">
-                                        <li className="nav_item">
-                                            <Link to="/" className="nav_link nav-active">
+                                <nav className={navstyle["nav"]} id="nav_menu">
+                                    <FiX className={navstyle["header_close"]} id="close_menu" onClick={handleCloseMenu} />
+                                    <ul className={navstyle["nav_list"]}>
+                                        <li className={navstyle["nav_item"]}>
+                                            <Link to="/" className={navstyle["nav_link nav-active"]}>
                                                 Home
                                             </Link>
                                         </li>
-                                        <li className="nav_item">
-                                            <Link to="/about" className="nav_link">
+                                        <li className={navstyle["nav_item"]}>
+                                            <Link to="/about" className={navstyle["nav_link"]}>
                                                 About Us
                                             </Link>
                                         </li>
-                                        <li className="nav_item">
+                                        <li className={navstyle["nav_item"]}>
                                             <Link to="/gallery" className="nav_link">
                                                 Gallery
                                             </Link>
                                         </li>
-                                        <li className="nav_item">
+                                        <li className={navstyle["nav_item"]}>
                                             <Link to="/contact" className="nav_link">
                                                 Contact Us
                                             </Link>
@@ -113,39 +114,39 @@ const NavPortal = () => {
 
                                     </ul>
                                 </nav>
-                                <FiMenu className="header_toggle" id="toggle_menu" onClick={handleToggleMenu} />
+                                <FiMenu className={navstyle["header_toggle"]} id="toggle_menu" onClick={handleToggleMenu} />
                             </>
                         ) : (
-                            <ul className="navbar-menu" id="nav_menu">
-                                <li className="navbar-item">
-                                    <a href="/" className="navbar-link nav-active" onClick={handleCloseMenu}>
+                            <ul className={navstyle["navbar-menu"]} id="nav_menu">
+                                <li className={navstyle["navbar-item"]}>
+                                    <a href="/" className={navstyle["navbar-link nav-active"]} onClick={handleCloseMenu}>
                                         Home
                                     </a>
                                 </li>
-                                <li className="navbar-item">
-                                    <a href="/about" className="navbar-link" onClick={handleCloseMenu}>
+                                <li className={navstyle["navbar-item"]}>
+                                    <a href="/about" className={navstyle["navbar-link"]} onClick={handleCloseMenu}>
                                         About Us
                                     </a>
                                 </li>
-                                <li className="navbar-item">
-                                    <a href="/gallery" className="navbar-link" onClick={handleCloseMenu}>
+                                <li className={navstyle["navbar-item"]}>
+                                    <a href="/gallery" className={navstyle["navbar-link"]} onClick={handleCloseMenu}>
                                         Gallery
                                     </a>
                                 </li>
-                                <li className="navbar-item">
-                                    <a href="/contact" className="navbar-link" onClick={handleCloseMenu}>
+                                <li className={navstyle["navbar-item"]}>
+                                    <a href="/contact" className={navstyle["navbar-link"]} onClick={handleCloseMenu}>
                                         Contact Us
                                     </a>
                                 </li>
-                                <li className="navbar-item">
-                                    <div class="dropdown">
+                                <li className={navstyle["navbar-item"]}>
+                                    <div class={navstyle["dropdown"]}>
                                         <a onClick={()=>{
                                             myFunction();
                                             handleImageFetch();
-                                        }}  className="dropbtn-portal">Account</a>
+                                        }}  className={navstyle["dropbtn-portal"]}>Account</a>
                                         <div id="myDropdown" class="dropdown-content">
                                             <img src={imageData} alt="accimg" id="accimg" />
-                                            <p className="accname">{ssitem}</p>
+                                            <p className={navstyle["accname"]}>{ssitem}</p>
                                             <a id='log-Portal' href='/photoupload'>Edit Profile</a>
                                             <button id='log'>LogOut</button>
                                         </div>

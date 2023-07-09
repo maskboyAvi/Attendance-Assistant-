@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import  { useState, useEffect } from 'react';
 
 import './PhotoUpload.css';
+import pustyles from './PhotoUpload.module.css';
 
 sessionStorage.setItem("email",'saketh')
 
@@ -34,13 +35,11 @@ const PhotoUpload = () => {
   }
 
 
-  
-
   return (
-    <div id='bo'>
-      <input id='in1' type="file" ref={fileInputRef} /><br></br>
+    <div className={pustyles['bo']}>
+      <input className='in1' type="file" ref={fileInputRef} /><br></br>
       <input className='in2-portal' type='text'onChange={(event)=>{setimid(event.target.value)}}/>
-      <button id='btn' onClick={handleFileUpload}>Upload</button>
+      <button className={pustyles['btn']} onClick={handleFileUpload}>Upload</button>
       <br></br>
      
     </div>
