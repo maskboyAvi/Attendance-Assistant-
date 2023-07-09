@@ -35,7 +35,7 @@ const Header = () => {
         <nav className={HeaderCss.navbar}>
           <div className={HeaderCss['navbar-container']}>
             <a href="/" className={HeaderCss['navbar-logo']}>
-              <img src={logo} alt="Logo" className="navbar-logo-img" />
+              <img src={logo} alt="Logo" className={HeaderCss["navbar-logo-img"]} />
             </a>
             {isMobile ? (
               <>
@@ -52,7 +52,7 @@ const Header = () => {
                 <FiMenu className="header_toggle" id="toggle_menu" onClick={handleToggleMenu} />
               </>
             ) : (
-              <ul className="navbar-menu" id="nav_menu">
+              <ul className={HeaderCss["navbar-menu"]} id="nav_menu">
                 <NavItem to="/" label="Home" />
                 <NavItem to="/about" label="About Us" />
                 <NavItem to="/gallery" label="Gallery" />
@@ -74,7 +74,7 @@ const NavItem = ({ to, label }) => {
     <li className="navbar-item">
       <Link
         to={to}
-        className={`navbar-link ${currentPath === to ? 'nav-active' : ''}`}
+        className={`${HeaderCss['navbar-link']} ${currentPath === to ? 'nav-active' : ''}`}
       >
         {label}
       </Link>

@@ -8,7 +8,7 @@
 .foot-con{
     max-width: 85%;
     margin: auto;
-    padding: 70px 0;
+    padding: 90px 0 10px 0;
 }
 .row{
     display: flex;
@@ -21,7 +21,7 @@
 }
 .footer-col h4{
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 20px;
     font-weight: 700;
     position: relative;
@@ -35,11 +35,14 @@
     height: 2px;
     width: 50px;
 }
+.footer-col ul{
+    padding-left: 0;
+}
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
 }
 .footer-col ul li a{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     color: #777;
     display: block;

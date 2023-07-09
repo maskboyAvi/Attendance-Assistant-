@@ -25,6 +25,7 @@
   }
   
   form input[type="email"],
+  form input[type="name"],
   form input[type="text"],
   form input[type="password"] {
     border-radius: 0.5rem;

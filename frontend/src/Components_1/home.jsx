@@ -44,7 +44,7 @@ function Home() {
             flagUrl="https://github.com/maskboyAvi/Attendance-Assistant-" flagDesc="Go to GitHub" icon="bx bx-git-pull-request" />
             <Service title="Database" desc="Database for a separate class is maintained separately ensuring security and consistent database
                         management." flag="1" icon="bx bx-buildings"
-            flagUrl="https://cloud.mongodb.com/v2/640a10ec4328ee356c183af8#/clusters" flagDesc="Go To MongoDB" />
+            flagUrl="https://cloud.mongodb.com/v2/640a10ec4328ee356c183af8#/clusters" flagDesc="Learn Database" />
             <Service title="Security" desc="Every user is authenticated via their username and password. Database is only accesssible to
                         authorised personel only." icon="ri-lock-2-line" />
              <Service title="Platform Support" desc="Attendance Assistant is supported and available freely across different platforms such as
