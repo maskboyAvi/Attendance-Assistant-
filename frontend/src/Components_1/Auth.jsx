@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import "../App.css"
+// import "../App.css"
+import "./Auth.css"
 import axios from "axios"
 
 export default function (props) {
@@ -143,9 +144,9 @@ export default function (props) {
                 id="profession"
                 onChange={handleSigninChange}
               >
-                <option value="">Select Profession</option>
-                <option value="Teacher">Teacher</option>
-                <option value="Student">Student</option>
+                <option value="" style={{color:'gray'}}>Select Profession</option>
+                <option value="Teacher" style={{color:'gray'}}>Teacher</option>
+                <option value="Student" style={{color:'gray'}}>Student</option>
             </select>
           </div>
             <div className="d-grid gap-2 mt-3">
@@ -211,9 +212,9 @@ export default function (props) {
               id="profession"
               onChange={handleChange}
             >
-              <option value="">Select Profession</option>
-              <option value="Teacher">Teacher</option>
-              <option value="Student">Student</option>
+              <option value="" style={{color:'gray'}}>Select Profession</option>
+              <option value="Teacher" style={{color:'gray'}}>Teacher</option>
+              <option value="Student" style={{color:'gray'}}>Student</option>
             </select>
           </div>
           <div className="form-group mt-3">
