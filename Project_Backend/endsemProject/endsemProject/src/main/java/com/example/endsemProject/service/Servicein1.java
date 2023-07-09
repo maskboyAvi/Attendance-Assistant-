@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import com.example.endsemProject.model.Asheet;
 
 @Service
-public interface Servicein1 extends CrudRepository<Asheet,LocalDate> {
-
-	
-
+public interface Servicein1 extends CrudRepository<Asheet,Long> {
+    
 }

@@ -43,13 +43,7 @@ public class AAServiceinImpl {
 	}
 	
 	public void markAttendance1(Asheet asheet) {
-		
 		servicein1.save(asheet);
-		
-	}
-	
-	public Optional<Asheet> getbyid(LocalDate date) {
-		return servicein1.findById(date);
 	}
 
 	public List<Asheet> getAll() {

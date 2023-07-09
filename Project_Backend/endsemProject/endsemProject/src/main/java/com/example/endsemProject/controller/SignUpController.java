@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.endsemProject.dto.SignUpDTO;
 import com.example.endsemProject.dto.TeacherDTO;
 import com.example.endsemProject.dto.UserDTO;
+import com.example.endsemProject.model.Asheet;
+import com.example.endsemProject.service.AAServiceinImpl;
 import com.example.endsemProject.service.auth.AuthService;
 
 @RestController
@@ -18,13 +20,20 @@ import com.example.endsemProject.service.auth.AuthService;
 public class SignUpController {
 	@Autowired
 	private AuthService authService;
+
+	@Autowired
+	private AAServiceinImpl aaServiceinImpl;
 	
+
 	@PostMapping("/signup")
 	public ResponseEntity<?> signUpUser(@RequestBody SignUpDTO signUpDTO){
 		UserDTO createdUser = authService.createUser(signUpDTO);
 		if(createdUser == null) {
 			return new ResponseEntity<>("User not created, Try again Later!!!",HttpStatus.BAD_REQUEST);
 		}
+
+		Asheet asheet = new Asheet(createdUser.getRollNo());
+		aaServiceinImpl.markAttendance1(asheet);
 		return new ResponseEntity<>(createdUser,HttpStatus.CREATED);
 	}
 
