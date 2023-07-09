@@ -8,6 +8,7 @@ public class EndsemProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EndsemProjectApplication.class, args);
+		System.out.println("App Running....");
 	}
 
 }

@@ -54,7 +54,7 @@ const Testimonials = () => {
             </p>
             <i className={tms["bx bxs-quote-alt-left quote-icon"]}></i>
             <div className={tms["details"]}>
-              <span className={tms["name"]}>Manroop Kaur</span>
+              <span className={tms["name"]}>Akanksha Yadav</span>
               <span className={tms["job"]}>Teacher</span>
             </div>
           </div>
