@@ -14,15 +14,21 @@ public class SignUpModel {
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Long id;
-		private String fullName;
+		private String name;
+		private String rollNo;
 		private String email;
 		private String profession;
+		private String code;
+		private String location;
 		private String password;
 
-		public StudentModel(Long id, String fullName, String email, String profession, String password) {
+		public StudentModel(Long id, String name, String email,String rollNo, String profession, String password, String code, String location) {
 			super();
 			this.id = id;
-			this.fullName = fullName;
+			this.name = name;
+			this.rollNo=rollNo;
+			this.location=location;
+			this.code=code;
 			this.email = email;
 			this.profession = profession;
 			this.password = password;
@@ -41,12 +47,19 @@ public class SignUpModel {
 			this.id = id;
 		}
 
-		public String getFullName() {
-			return fullName;
+		public String getname() {
+			return name;
 		}
 
-		public void setFullName(String fullName) {
-			this.fullName = fullName;
+		public void setname(String name) {
+			this.name = name;
+		}
+		public String getRollNo() {
+			return rollNo;
+		}
+
+		public void setRollNo(String rollNo) {
+			this.rollNo = rollNo;
 		}
 
 		public String getEmail() {
@@ -72,6 +85,18 @@ public class SignUpModel {
 		public void setPassword(String password) {
 			this.password = password;
 		}
+		public String getCode() {
+			return code;
+		}
+		public void setCode(String code) {
+			this.code = code;
+		}
+		public String getLocation() {
+			return location;
+		}
+		public void setLocation(String location) {
+			this.location = location;
+		}
 	}
 
 	@Entity
@@ -80,17 +105,23 @@ public class SignUpModel {
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Long id;
-		private String fullName;
+		private String name;
+		private String rollNo;
 		private String email;
 		private String profession;
+		private String code;
+		private String location;
 		private String password;
 
-		public TeacherModel(Long id, String fullName, String email, String profession, String password) {
+		public TeacherModel(Long id, String name,String rollNo,String location,String code, String email, String profession, String password) {
 			super();
 			this.id = id;
-			this.fullName = fullName;
+			this.name = name;
 			this.email = email;
 			this.profession = profession;
+			this.rollNo=rollNo;
+			this.location=location;
+			this.code=code;
 			this.password = password;
 		}
 
@@ -107,12 +138,19 @@ public class SignUpModel {
 			this.id = id;
 		}
 
-		public String getFullName() {
-			return fullName;
+		public String getname() {
+			return name;
 		}
 
-		public void setFullName(String fullName) {
-			this.fullName = fullName;
+		public void setname(String name) {
+			this.name = name;
+		}
+		public String getRollNo() {
+			return rollNo;
+		}
+
+		public void setRollNo(String rollNo) {
+			this.rollNo = rollNo;
 		}
 
 		public String getEmail() {
@@ -137,6 +175,18 @@ public class SignUpModel {
 
 		public void setPassword(String password) {
 			this.password = password;
+		}
+		public String getCode() {
+			return code;
+		}
+		public void setCode(String code) {
+			this.code = code;
+		}
+		public String getLocation() {
+			return location;
+		}
+		public void setLocation(String location) {
+			this.location = location;
 		}
 	}
 

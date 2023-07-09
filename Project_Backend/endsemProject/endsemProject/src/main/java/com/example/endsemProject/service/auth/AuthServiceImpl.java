@@ -1,7 +1,6 @@
 package com.example.endsemProject.service.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.endsemProject.dto.SignUpDTO;
@@ -24,28 +23,36 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public UserDTO createUser(SignUpDTO signUpDTO) {
 		StudentModel user = new StudentModel();
-		user.setFullName(signUpDTO.getName());
+		user.setname(signUpDTO.getName());
 		user.setEmail(signUpDTO.getEmail());
+		user.setRollNo(signUpDTO.getRollNo());
+		user.setProfession(signUpDTO.getProfession());
 		// user.setPassword(new BCryptPasswordEncoder().encode(signUpDTO.getPassword()));
 		user.setPassword(signUpDTO.getPassword());
 		StudentModel createdUser = userRepository.save(user);
 		UserDTO userDTO = new UserDTO();
 		userDTO.setEmail(createdUser.getEmail());
-		userDTO.setName(createdUser.getFullName());
+		userDTO.setName(createdUser.getname());
+		userDTO.setRollNo(createdUser.getRollNo());
+		userDTO.setProfession(createdUser.getProfession());
 		return userDTO;
 	}
 
 	@Override
 	public TeacherDTO createTeacher(SignUpDTO signUpDTO) {
 		TeacherModel teacher = new TeacherModel();
-		teacher.setFullName(signUpDTO.getName());
+		teacher.setname(signUpDTO.getName());
 		teacher.setEmail(signUpDTO.getEmail());
+		teacher.setRollNo(signUpDTO.getRollNo());
+		teacher.setProfession(signUpDTO.getProfession());
 		// teacher.setPassword(new BCryptPasswordEncoder().encode(signUpDTO.getPassword()));
 		teacher.setPassword(signUpDTO.getPassword());
 		TeacherModel createdTeacher = teacherRepository.save(teacher);
 		TeacherDTO teacherDTO = new TeacherDTO();
 		teacherDTO.setEmail(createdTeacher.getEmail());
-		teacherDTO.setName(createdTeacher.getFullName());
+		teacherDTO.setName(createdTeacher.getname());
+		teacherDTO.setRollNo(createdTeacher.getRollNo());
+		teacherDTO.setProfession(createdTeacher.getProfession());
 		return teacherDTO;
 	}
 

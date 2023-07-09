@@ -41,7 +41,7 @@ function Contact() {
                 <h1>Get In Touch</h1>
                 <form method="post" id="feedbackForm" autocomplete="on" onSubmit={handleSubmit}>
                     <div className={cnt["flex-rev-cts"]}>
-                      <input type="name" placeholder="Name" name="fullname" id="name" required onkeypress="return validName(event.charCode)" />
+                      <input type="name" placeholder="Name" name="name" id="name" required onkeypress="return validName(event.charCode)" />
                       <label for="name">Full Name</label>
                     </div>
                     <div className={cnt["flex-rev-cts"]}>

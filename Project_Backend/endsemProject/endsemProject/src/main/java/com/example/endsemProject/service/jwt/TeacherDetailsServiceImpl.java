@@ -22,7 +22,7 @@ public class TeacherDetailsServiceImpl implements UserDetailsService {
 	        if(user == null){
 	            throw new UsernameNotFoundException("User not found",null);
 	        }
-	        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), new ArrayList<>());
+	        return new org.springframework.security.core.userdetails.User(user.getRollNo(), user.getEmail(), new ArrayList<>());
 	}
 
 }
