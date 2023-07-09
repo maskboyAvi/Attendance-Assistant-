@@ -64,6 +64,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -90,6 +91,9 @@ public class AuthenticationController {
     @Autowired
     private TeacherRepo teacherRepo;
 
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+
     @PostMapping("/authenticate")
     public AuthenticationResponse createAuthenticationToken(@RequestBody AuthenticationDTO authenticationDTO, HttpServletResponse response) throws BadCredentialsException, DisabledException, UsernameNotFoundException, IOException {
            try {
@@ -97,7 +101,9 @@ public class AuthenticationController {
             System.out.println(authenticationDTO.getEmail() + " " + authenticationDTO.getPassword());
             StudentModel userOptional = studentRepo.findFirstByEmail(authenticationDTO.getEmail());
             if (userOptional != null) {
-                if (userOptional.getPassword().equals(authenticationDTO.getPassword())) {
+                String hashedPassword  = userOptional.getPassword();
+                String pass = authenticationDTO.getPassword();
+                if (passwordEncoder.matches(pass, hashedPassword)) {
                     // Password matches, generate JWT token
                     final String jwt = jwtUtil.generateToken(userOptional.getEmail());
                     return new AuthenticationResponse(jwt);
@@ -123,7 +129,9 @@ public class AuthenticationController {
             
             TeacherModel userOptional = teacherRepo.findFirstByEmail(authenticationDTO.getEmail());
             if (userOptional != null) {
-                if (userOptional.getPassword().equals(authenticationDTO.getPassword())) {
+                String hashedPassword  = userOptional.getPassword();
+                String pass = authenticationDTO.getPassword();
+                if (passwordEncoder.matches(pass, hashedPassword)) {
                     // Password matches, generate JWT token
                     final String jwt = jwtUtil.generateToken(userOptional.getEmail());
                     return new AuthenticationResponse(jwt);

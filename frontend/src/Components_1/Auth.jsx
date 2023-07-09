@@ -2,6 +2,7 @@ import React, { useState } from "react"
 // import "../App.css"
 import "./Auth.css"
 import axios from "axios"
+import bcrypt from 'bcryptjs';
 
 export default function (props) {
   let [authMode, setAuthMode] = useState("signin")
@@ -62,13 +63,14 @@ export default function (props) {
         console.log(email)
         console.log(profession)
         console.log(password)
+        const hashedPassword = bcrypt.hashSync(password,10);
 
         if(profession === "Student"){
           axios.post("http://localhost:8080/signup", {
             name,
             profession,
             email,
-            password,
+            password:hashedPassword,
             rollNo,
           }).then((res) => {
             console.log(res.data,res.status)
@@ -79,7 +81,7 @@ export default function (props) {
           axios.post("http://localhost:8080/signupTeacher", {
             name,
             email,
-            password,
+            password:hashedPassword,
             profession,
             rollNo,
           }).then((res) => {
