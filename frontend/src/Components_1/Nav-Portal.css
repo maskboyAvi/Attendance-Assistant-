@@ -80,7 +80,7 @@ header {
 
 .nav_link {
     padding: 5px 15px;
-    color: var(- --project-color-1);
+    color: var(--project-color-1);
     font-size: 1.1rem;
     font-weight: 700;
     border-radius: 5px;

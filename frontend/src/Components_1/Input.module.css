@@ -49,6 +49,7 @@
     align-self: flex-start;
     color: var(--secondary-text-color);
     font-weight: 600;
+    font-size: 20px;
   }
   
   form .submit {
@@ -56,7 +57,7 @@
     width: 100%;
     gap: 0.5rem;
     border-radius: 3rem;
-    background-color: var(--bg-dark);
+    background-color: var(--project-color-3);
     color: var(--bg-light);
     border: none;
     cursor: pointer;
@@ -68,7 +69,48 @@
   }
   
   form .submit:hover {
-    background-color: var(--project-color-3);
+    background-color: var(--project-color-2);
+    color: var(--bg-light);
+  }
+  
+  form .submit2 {
+    padding: 1rem 0.75rem;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: rgb(17, 91, 5);
+    color: var(--bg-light);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: .9rem;
+    width: 80%;
+    margin: auto;
+  }
+  
+  form .submit2:hover {
+    background-color: rgb(53, 126, 53);
+    color: var(--bg-light);
+  }
+  form .submit3 {
+    padding: 1rem 0.75rem;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: rgb(133, 16, 16);
+    color: var(--bg-light);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: .9rem;
+    width: 80%;
+    margin: auto;
+  }
+  
+  form .submit3:hover {
+    background-color: rgb(216, 79, 29);
     color: var(--bg-light);
   }
   

@@ -71,7 +71,7 @@ function SPortal() {
               </span>
               <span className={inputCss["input-span"]}>
                 <label htmlFor="in3-s" className={inputCss.label}>
-                  Enter TeacherId:
+                  Enter CourseId:
                 </label>
                 <input type="text" name="rollNo" id="in3-s" />
               </span>

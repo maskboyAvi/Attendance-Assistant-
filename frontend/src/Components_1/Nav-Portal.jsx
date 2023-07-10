@@ -92,7 +92,7 @@ const NavPortal = () => {
                                     <FiX className={navstyle["header_close"]} id="close_menu" onClick={handleCloseMenu} />
                                     <ul className={navstyle["nav_list"]}>
                                         <li className={navstyle["nav_item"]}>
-                                            <Link to="/" className={navstyle["nav_link nav-active"]}>
+                                            <Link  to="/" className={`${navstyle["nav_link nav-active"]} text-white`}>
                                                 Home
                                             </Link>
                                         </li>

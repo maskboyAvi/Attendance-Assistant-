@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import SPortalCss from "./SPortal.module.css";
 import myImageT from "../Images/teach.png";
 import NavPortal from "./Nav-Portal";
@@ -8,8 +8,8 @@ import TableComponent from "./Table";
 import studImg from "../Images/SPortal_stud.png";
 import inputCss from "./Input.module.css";
 function TPortal() {
-  const [code1 , setCode] = useState(''); 
-  const [roll, setRoll]  = useState('');
+  const [code1, setCode] = useState("");
+  const [roll, setRoll] = useState("");
   let [details, setDetails] = useState({
     code: "",
     rollNo: "",
@@ -40,18 +40,18 @@ function TPortal() {
       counter += 1;
     }
     console.log(result);
-     setCode(result);
+    setCode(result);
     // document.getElementById("code-T").innerHTML = result;
     var inputElement = document.getElementById("code-T");
     inputElement.disabled = false; // Remove the disabled attribute temporarily
-    
+
     inputElement.value = result; // Update the value
     inputElement.disabled = true; // Reapply the disabled attribute
   }
 
   const end = () => {
-    const jwt =sessionStorage.getItem("jwt");
-    
+    const jwt = sessionStorage.getItem("jwt");
+
     fetch("http://localhost:8080/addcode", {
       method: "POST",
       body: JSON.stringify({
@@ -72,9 +72,13 @@ function TPortal() {
       .then((result) => (document.getElementById("atte").innerHTML += result))
       .catch((error) => console.log("error", error));
   };
-    const divStyle = {
-      color: 'white',
-    };
+
+  const resetFunc = () => {
+    console.log("Set Null value in db");
+  };
+  const divStyle = {
+    color: "white",
+  };
   return (
     <>
       <NavPortal />
@@ -101,45 +105,57 @@ function TPortal() {
           <section>
             <div className={SPortalCss["stud-content"]}>
               <h1 className={SPortalCss["stud-heading"]}>
-
                 &#183; TAKE ATTENDANCE &#183;
               </h1>
               <form class={inputCss.form}>
-              <span className={inputCss["input-span"]}>
-                <label htmlFor="in1-s" className={inputCss.label}>
-                  Enter RollNo:
-                </label>
-                <input type="text" onChange={(e)=>{
-                  setRoll(e.target.value);
-                }} name="rollNo" id="in1-s" />
-              </span>
+                <div className={SPortalCss['courseid-inp']}>
+                  <span className={inputCss["input-span"]}>
+                    <label htmlFor="in1-s" className={inputCss.label}>
+                      Enter CourseId:
+                    </label>
+                    <input
+                      type="text"
+                      onChange={(e) => {
+                        setRoll(e.target.value);
+                      }}
+                      name="rollNo"
+                      id="in1-s"
+                      placeholder="course id"
+                      className={`${inputCss["courseid-inp"]} text-center`}
+                    />
+                  </span>
+                </div>
                 <div className={SPortalCss["btn-manage-sp"]}>
                   <button
-                    class={inputCss.submit}
+                    className={inputCss.submit}
                     onClick={create}
                     type="button"
+                    style={{ marginRight:"10px"}}
                   >
                     Create Code
                   </button>
                   <span class={inputCss["input-span"]}>
-
                     <input
                       type="text"
                       name="code"
                       id="code-T"
-                      placeholder="A3Se"
+                      placeholder="Secret Code"
                       value={code1}
+                      className="text-center"
                       disabled
                       style={divStyle}
                     />
                   </span>
-
                 </div>
-                <button class={inputCss.submit} onClick={end} type="button">
+                <button class={inputCss.submit2} onClick={end} type="button">
                   Start Attendance
                 </button>
-                <button class={inputCss.submit} onClick={ata} type="button">
-                  Check Attendance
+                <button
+                  class={inputCss.submit3}
+                  onClick={resetFunc}
+                  type="button"
+                >
+                  Stop Attendance
                 </button>
                 <div id="atte"></div>
                 <div>

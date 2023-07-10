@@ -90,7 +90,7 @@ header{
 .navbar-link{
     color: white;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .navbar-link:hover{
     font-size: 1.3rem;
@@ -156,10 +156,12 @@ header{
 a,
 button {
   /* margin-top: 10px; */
+  color: white;
   display: inline-block;
   padding: 14px 30px;
   letter-spacing: 1.2px;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
+  font-size: 30px;
   border: 1px #243342;
   border-radius: 7px;
   margin-right: auto;

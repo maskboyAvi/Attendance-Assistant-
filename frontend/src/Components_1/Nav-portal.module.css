@@ -173,7 +173,7 @@ header {
 
 a,
 button {
-    /* margin-top: 10px; */
+    margin-top: 10px;
     display: inline-block;
     padding: 14px 30px;
     letter-spacing: 1.2px;
