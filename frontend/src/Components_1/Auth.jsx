@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "../App.css"
 import "./Auth.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import astyles from "./Auth.module.css";
@@ -8,7 +7,6 @@ import bcrypt from "bcryptjs";
 import Header from "./header";
 import Footer from "./footer";
 export default function (props) {
-  // let navigate=useNavigate("/auth")
   sessionStorage.setItem("jwt", "false");
   let [authMode, setAuthMode] = useState("signin");
   let [details, setDetails] = useState({
@@ -29,9 +27,6 @@ export default function (props) {
 
   const handleSignin = (e) => {
     e.preventDefault();
-    // console.log(signinDetails.email);
-    // console.log(signinDetails.password);
-    // console.log(signinDetails.profession);
     if (
       signinDetails.email &&
       signinDetails.password &&
@@ -87,11 +82,6 @@ export default function (props) {
         password &&
         confirmPassword
       ) {
-        // console.log(name);
-        // console.log(rollNo);
-        // console.log(email);
-        // console.log(profession);
-        // console.log(password);
         const hashedPassword = bcrypt.hashSync(password, 10);
 
         if (profession === "Student") {
