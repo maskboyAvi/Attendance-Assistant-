@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SPortalCss from "./SPortal.module.css";
 import NavPortal from "./Nav-Portal";
 import Footer from "./footer";
@@ -15,12 +15,37 @@ function SPortal() {
     }
   }, []);
 
+  const [coordinates, setCoordinates] = useState(null);
+  const [latitut, setLatitut] = useState(null);
+  const [longi, setLongi] = useState(null);
   function mypost() {
     const id = document.getElementById("in1-s").value;
     const na = document.getElementById("in2-s").value;
     const email = document.getElementById("in3-s").value;
-    console.log(id);
-    console.log(na);
+    const latitude = null;
+    const longitude = null;
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const  latitude  = position.coords.latitude;
+          const  longitude  = position.coords.longitude;
+          // setCoordinates({ latitude, longitude });
+          setLatitut(latitude);
+          setLongi(longitude);
+          console.log(latitude)
+          console.log(longitude)
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    } else {
+      console.log("Geolocation is not supported");
+    }
+
+    console.log(latitut)
+    console.log(longi)
 
     fetch("http://localhost:8080/mark", {
       method: "POST",
@@ -28,7 +53,10 @@ function SPortal() {
         rollno: id,
         code: na,
         email: email,
+        latitude: latitude,
+        longitude: longitude,
       }),
+      
       headers: {
         Accept: "application/json",
         "Content-type": "application/json;",
@@ -36,6 +64,7 @@ function SPortal() {
     });
   }
 
+  
   return (
     <>
       <NavPortal />
@@ -84,7 +113,10 @@ function SPortal() {
               <span className={inputCss.span}>
                 <a href="#">How to Get Code?</a>
               </span>
-              <button className={inputCss.submit} onClick={mypost}>
+              <button
+                className={inputCss.submit}
+                onClick={mypost}
+              >
                 Submit
               </button>
               {/* <span className={inputCss.span}>
@@ -94,7 +126,7 @@ function SPortal() {
           </div>
         </section>
       </div>
-      
+
       <Footer />
     </>
   );

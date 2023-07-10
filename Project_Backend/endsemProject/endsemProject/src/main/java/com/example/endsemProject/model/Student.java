@@ -14,26 +14,34 @@ public class Student {
 	private String rollno;
     private String  code;
     private String email;
-    private String usernaame;
-	public Student(int id, String rollno, String code, String email, String usernaame) {
-		super();
+    private float latitude;
+    private float longitude;
+	
+	public float getLatitude() {
+		return latitude;
+	}
+	public Student(int id, String rollno, String code, String email, float latitude, float longitude) {
 		this.id = id;
 		this.rollno = rollno;
 		this.code = code;
 		this.email = email;
-		this.usernaame = usernaame;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
+	}
+	public float getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
 	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getUsernaame() {
-		return usernaame;
-	}
-	public void setUsernaame(String usernaame) {
-		this.usernaame = usernaame;
 	}
 	public int getId() {
 		return id;

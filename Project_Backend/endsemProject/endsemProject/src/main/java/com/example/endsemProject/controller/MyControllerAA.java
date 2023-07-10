@@ -44,6 +44,8 @@ public void markA(@RequestBody Student s) {
 	 
 	StudentModel sc=studentRepo.findByRollNo(s.getRollno());
     TeacherModel teach=teacherRepo.findByRollNo(s.getEmail());
+    sc.setLongitude(s.getLongitude());
+    sc.setLatitude(s.getLatitude());
     sc.setCode(s.getCode());
     studentRepo.save(sc);
 

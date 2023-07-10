@@ -19,19 +19,39 @@ public class SignUpModel {
 		private String email;
 		private String profession;
 		private String code;
-		private String location;
+		private float longitude;
+		private float latitude;
 		private String password;
 
-		public StudentModel(Long id, String name, String email,String rollNo, String profession, String password, String code, String location) {
-			super();
+		
+     
+		public StudentModel(Long id, String name, String rollNo, String email, String profession, String code,
+				float longitude, float latitude, String password) {
 			this.id = id;
 			this.name = name;
-			this.rollNo=rollNo;
-			this.location=location;
-			this.code=code;
+			this.rollNo = rollNo;
 			this.email = email;
 			this.profession = profession;
+			this.code = code;
+			this.longitude = longitude;
+			this.latitude = latitude;
 			this.password = password;
+		}
+
+		public float getLongitude() {
+			return longitude;
+		}
+
+		public void setLongitude(float longitude) {
+			this.longitude = longitude;
+		}
+
+		public float getLatitude() {
+			return latitude;
+		}
+
+		public void setLatitude(float latitude) {
+			this.latitude = latitude;
 		}
 
 		public StudentModel() {
@@ -91,12 +111,7 @@ public class SignUpModel {
 		public void setCode(String code) {
 			this.code = code;
 		}
-		public String getLocation() {
-			return location;
-		}
-		public void setLocation(String location) {
-			this.location = location;
-		}
+		
 	}
 
 	@Entity
