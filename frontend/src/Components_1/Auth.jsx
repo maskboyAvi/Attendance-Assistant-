@@ -29,9 +29,9 @@ export default function (props) {
 
   const handleSignin = (e) => {
     e.preventDefault();
-    console.log(signinDetails.email);
-    console.log(signinDetails.password);
-    console.log(signinDetails.profession);
+    // console.log(signinDetails.email);
+    // console.log(signinDetails.password);
+    // console.log(signinDetails.profession);
     if (
       signinDetails.email &&
       signinDetails.password &&
@@ -85,11 +85,11 @@ export default function (props) {
         password &&
         confirmPassword
       ) {
-        console.log(name);
-        console.log(rollNo);
-        console.log(email);
-        console.log(profession);
-        console.log(password);
+        // console.log(name);
+        // console.log(rollNo);
+        // console.log(email);
+        // console.log(profession);
+        // console.log(password);
         const hashedPassword = bcrypt.hashSync(password, 10);
 
         if (profession === "Student") {
