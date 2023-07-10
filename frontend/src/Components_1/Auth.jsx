@@ -47,6 +47,7 @@ export default function (props) {
             console.log(res.data);
             sessionStorage.setItem("jwt", res.data.jwtToken);
             window.location.href = "/student-portal";
+            alert("Login Successful");
           })
           .catch((err) => {
             console.log(err);
@@ -61,6 +62,7 @@ export default function (props) {
             console.log(res.data);
             sessionStorage.setItem("jwt", res.data.jwtToken);
             window.location.href = "/teacher-portal";
+            alert("Login Successful");
           })
           .catch((err) => {
             console.log(err);
@@ -104,6 +106,7 @@ export default function (props) {
             .then((res) => {
               console.log(res.data, res.status);
               setAuthMode("signin");
+              alert("Account Created Successfully");
             })
             .catch((err) => {
               console.log(err);
