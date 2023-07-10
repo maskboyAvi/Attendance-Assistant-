@@ -45,6 +45,8 @@ public void markA(@RequestBody Student s) {
 	StudentModel sc=studentRepo.findByRollNo(s.getRollno());
     TeacherModel teach=teacherRepo.findByRollNo(s.getEmail());
     sc.setCode(s.getCode());
+    studentRepo.save(sc);
+
     serimpl.markAttendance(s);
    if((sc.getCode()).equalsIgnoreCase(teach.getCode())){
      Asheet as= serimpl.getByRollNo(s.getRollno());
@@ -67,15 +69,15 @@ public void addNewday(@RequestBody  Student s ) {
     teach.setCode(s.getCode());
     
      serimpl.markAttendance(s);
-	   LocalDate currentDate = LocalDate.now();
+	//    LocalDate currentDate = LocalDate.now();
 
-     // Create a formatter for the desired output format
-     DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd_MM_yyyy");
+    //  // Create a formatter for the desired output format
+    //  DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd_MM_yyyy");
       
-     // Format the current date using the output formatter
-     String formattedDate = currentDate.format(outputFormatter);
-    formattedDate=" "+formattedDate;
-    serimpl.addDynamicColumn(formattedDate);
+    //  // Format the current date using the output formatter
+    //  String formattedDate = currentDate.format(outputFormatter);
+    // formattedDate=" "+formattedDate;
+    // serimpl.addDynamicColumn(formattedDate);
     
 }
 

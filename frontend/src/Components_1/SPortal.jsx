@@ -18,6 +18,7 @@ function SPortal() {
   function mypost() {
     const id = document.getElementById("in1-s").value;
     const na = document.getElementById("in2-s").value;
+    const email = document.getElementById("in3-s").value;
     console.log(id);
     console.log(na);
 
@@ -26,6 +27,7 @@ function SPortal() {
       body: JSON.stringify({
         rollno: id,
         code: na,
+        email: email,
       }),
       headers: {
         Accept: "application/json",
@@ -66,6 +68,12 @@ function SPortal() {
                   Enter RollNo:
                 </label>
                 <input type="text" name="rollNo" id="in1-s" />
+              </span>
+              <span className={inputCss["input-span"]}>
+                <label htmlFor="in3-s" className={inputCss.label}>
+                  Enter TeacherId:
+                </label>
+                <input type="text" name="rollNo" id="in3-s" />
               </span>
               <span className={inputCss["input-span"]}>
                 <label htmlFor="in2-s" className={inputCss.label}>
