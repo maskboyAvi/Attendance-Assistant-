@@ -7,11 +7,19 @@ import navstyle from './Nav-portal.module.css'
 import PhotoUpload from './PhotoUpload';
 import logo from "../Images/logo.png"
 // import logo from '../Images/logo.png'
+import Accimg from "../Images/acc.png"
 
 var ssitem=sessionStorage.getItem("email");
 
 
 const NavPortal = () => {
+
+    const handleLogout = () => {
+        sessionStorage.setItem("jwt","false");
+        sessionStorage.setItem("email","");
+        window.location.href="/";
+        alert("Logged Out Successfully");
+    }
     
     
     const  myFunction = ()=> {
@@ -145,10 +153,10 @@ const NavPortal = () => {
                                             handleImageFetch();
                                         }}  className={navstyle["dropbtn-portal"]}>Account</a>
                                         <div id="myDropdown" class="dropdown-content">
-                                            <img src={imageData} alt="accimg" id="accimg" />
+                                            <img src={Accimg} alt="accimg" id="accimg" />
                                             <p className={navstyle["accname"]}>{ssitem}</p>
                                             <a id='log-Portal' href='/photoupload'>Edit Profile</a>
-                                            <button id='log'>LogOut</button>
+                                            <button id='log' onClick={handleLogout}>LogOut</button>
                                         </div>
                                     </div>
 
