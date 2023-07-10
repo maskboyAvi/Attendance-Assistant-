@@ -6,6 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import { Link } from 'react-router-dom';
 function Home() {
+    sessionStorage.setItem("jwt","false");
   return (
     <>
         <Header />

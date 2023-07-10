@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 
 function App() {
+  sessionStorage.setItem("jwt","false");
   return (
     <>
     <Header />

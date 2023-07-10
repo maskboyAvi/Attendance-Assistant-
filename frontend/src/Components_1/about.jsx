@@ -6,6 +6,7 @@ import Footer from "./footer";
 import ClgLogo from "../Images/Final_Logo_IIITL.png";
 
 function AboutUs() {
+  sessionStorage.setItem("jwt","false");
   return (
     <>
     <Header />

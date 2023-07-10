@@ -33,6 +33,7 @@ class PhotoGallery extends Component {
 
   render() {
     const { activeFilter } = this.state;
+    sessionStorage.setItem("jwt","false");
 
     return (
       <div className={[gallerycss["body-gly"]]}>

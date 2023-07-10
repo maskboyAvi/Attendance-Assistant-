@@ -11,6 +11,7 @@ import Footer from "./footer";
 import abt from "./aboutUs.module.css";
 
 function Team() {
+  sessionStorage.setItem("jwt","false");
   return (
     <>
     <Header />

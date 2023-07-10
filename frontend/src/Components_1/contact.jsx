@@ -10,7 +10,8 @@ function Contact() {
         navigate('/');
     }
 
-
+    sessionStorage.setItem("jwt","false");
+    
   return (
     <>
     <Header/>
