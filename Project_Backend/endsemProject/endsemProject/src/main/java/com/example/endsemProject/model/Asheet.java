@@ -11,6 +11,10 @@ public class Asheet {
 private Long id;
 @Column(unique = true)
 private String rollNo;
+@Column(name = "Longitude")
+private Float longitude;
+@Column(name = "Latitude")
+private Float latitude;
 
 private int _10_07_2023;
 
@@ -51,4 +55,21 @@ public String getRollNo() {
 public void setRollNo(String rollNo) {
 	this.rollNo = rollNo;
 }
+
+public Float getLongitude() {
+	return longitude;
+}
+
+public void setLongitude(Float longitude) {
+	this.longitude = longitude;
+}
+
+public Float getLatitude() {
+	return latitude;
+}
+
+public void setLatitude(Float latitude) {
+	this.latitude = latitude;
+}
+
 }

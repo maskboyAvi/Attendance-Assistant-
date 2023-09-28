@@ -22,7 +22,7 @@ public class WebSecurity {
         return http
         		.csrf(csrf -> csrf.disable())
         		.authorizeHttpRequests(auth -> auth
-        			.requestMatchers("/authenticate","/signup","/signupTeacher","/authenticateTeacher","/mark","/table","/check","/fileresource/upload/{email}","/fileresource/download/{email}","/addcode").permitAll()
+        			.requestMatchers("/authenticate","/signup","/signupTeacher","/authenticateTeacher","/mark","/table","/check","/fileresource/upload/{email}","/fileresource/download/{email}","/addcode","Cordinates/{rollno}").permitAll()
         			.anyRequest().authenticated()
         		)
         		.sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

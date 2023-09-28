@@ -4,14 +4,24 @@ import tabstyle from "./Tablecss.module.css";
 const TableComponent = () => {
   const [tb1, setTb1] = useState([]);
   const [showMap, setShowMap] = useState(false);
-  const latitude = 26.800856;
-  const longitude = 81.023980;
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);  
 
   useEffect(() => {
     fetch("http://localhost:8080/table")
       .then((response) => response.json())
       .then((result) => {
-        setTb1(result);
+        console.log(result);
+        const data = result.map((item) => {
+          const { id, rollNo,longitude,latitude, _10_07_2023 } = item;
+          setLatitude(latitude);
+          setLongitude(longitude);
+          // Add . to id at the end of the string
+          const SId= item.id + ".";
+          return { SId, rollNo, _10_07_2023 };
+        });
+        setTb1(data);
+        console.log(data);
       })
       .catch((error) => console.log("error", error));
   }, []);
