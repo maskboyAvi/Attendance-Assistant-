@@ -63,9 +63,4 @@ public class AAServiceinImpl {
 	public Asheet getByRollNo(String rollno) {
 		return servicein1.getByRollNo(rollno);
 	 }
-
-    
-	
-	
-
 }

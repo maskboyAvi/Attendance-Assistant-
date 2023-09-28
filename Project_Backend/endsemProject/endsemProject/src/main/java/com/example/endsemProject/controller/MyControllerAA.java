@@ -53,6 +53,8 @@ public void markA(@RequestBody Student s) {
    if((sc.getCode()).equalsIgnoreCase(teach.getCode())){
      Asheet as= serimpl.getByRollNo(s.getRollno());
      as.set_10_07_2023(1);
+     as.setLatitude(sc.getLatitude());
+     as.setLongitude(sc.getLongitude());
      aaServiceinImpl.markAttendance1(as);
      System.out.println(as.get_10_07_2023()); 
    }else{
@@ -84,10 +86,13 @@ public void addNewday(@RequestBody  Student s ) {
 }
 
 @GetMapping("/table")
-public List<Asheet> gettable()
-{
+public List<Asheet> gettable(){
 	return serimpl.getAll();
 }
 
+@GetMapping("/Cordinates/{rollno}")
+public Asheet getFullTable(@PathVariable String rollno) {
+    return aaServiceinImpl.getByRollNo(rollno);
+}
 
 }

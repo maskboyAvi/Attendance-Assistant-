@@ -7,45 +7,51 @@ import studImg from "../Images/SPortal_stud.png";
 import inputCss from "./Input.module.css";
 
 function SPortal() {
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
   useEffect(() => {
     const jwt = sessionStorage.getItem("jwt");
     if (jwt === "false") {
       alert("Please login");
       window.location.href = "/auth";
     }
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position)
+      setLatitude(position.coords.latitude)
+      setLongitude(position.coords.longitude)
+      console.log(latitude,longitude);
+    })
   }, []);
 
   const [coordinates, setCoordinates] = useState(null);
-  const [latitut, setLatitut] = useState(null);
-  const [longi, setLongi] = useState(null);
+
   function mypost() {
     const id = document.getElementById("in1-s").value;
     const na = document.getElementById("in2-s").value;
     const email = document.getElementById("in3-s").value;
-    const latitude = null;
-    const longitude = null;
+    // const latitude = null;
+    // const longitude = null;
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const  latitude  = position.coords.latitude;
-          const  longitude  = position.coords.longitude;
-          // setCoordinates({ latitude, longitude });
-          setLatitut(latitude);
-          setLongi(longitude);
-          console.log(latitude)
-          console.log(longitude)
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-    } else {
-      console.log("Geolocation is not supported");
-    }
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(
+    //     (position) => {
+    //       // const  latitude  = position.coords.latitude;
+    //       // const  longitude  = position.coords.longitude;
+    //       // // setCoordinates({ latitude, longitude });
+    //       // setLatitut(latitude);
+    //       // setLongi(longitude);
+    //       // console.log(latitude)
+    //       // console.log(longitude)
+    //       console.log(position)
+    //     },
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // } else {
+    //   console.log("Geolocation is not supported");
+    // }
 
-    console.log(latitut)
-    console.log(longi)
 
     fetch("http://localhost:8080/mark", {
       method: "POST",
@@ -56,7 +62,7 @@ function SPortal() {
         latitude: latitude,
         longitude: longitude,
       }),
-      
+
       headers: {
         Accept: "application/json",
         "Content-type": "application/json;",
@@ -64,7 +70,7 @@ function SPortal() {
     });
   }
 
-  
+
   return (
     <>
       <NavPortal />
