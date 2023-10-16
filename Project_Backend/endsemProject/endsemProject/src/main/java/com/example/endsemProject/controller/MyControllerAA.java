@@ -52,11 +52,11 @@ public void markA(@RequestBody Student s) {
     serimpl.markAttendance(s);
    if((sc.getCode()).equalsIgnoreCase(teach.getCode())){
      Asheet as= serimpl.getByRollNo(s.getRollno());
-     as.set_10_07_2023(1);
+     as.set_16_10_2023(1);
      as.setLatitude(sc.getLatitude());
      as.setLongitude(sc.getLongitude());
      aaServiceinImpl.markAttendance1(as);
-     System.out.println(as.get_10_07_2023()); 
+     System.out.println(as.get_16_10_2023()); 
    }else{
     System.out.println("aks");
    }
