@@ -16,20 +16,20 @@ private Float longitude;
 @Column(name = "Latitude")
 private Float latitude;
 
-private int _10_07_2023;
+private int _29_09_2023;
 
-public int get_10_07_2023() {
-	return _10_07_2023;
+public int get_29_09_2023() {
+	return _29_09_2023;
 }
 
-public void set_10_07_2023(int _10_07_2023) {
-	this._10_07_2023 = _10_07_2023;
+public void set_29_09_2023(int _29_09_2023) {
+	this._29_09_2023 = _29_09_2023;
 }
 
-public Asheet(Long id, String rollNo, int _10_07_2023) {
+public Asheet(Long id, String rollNo, int _29_09_2023) {
 	this.id = id;
 	this.rollNo = rollNo;
-	this._10_07_2023 = _10_07_2023;
+	this._29_09_2023 = _29_09_2023;
 }
 
 public Asheet(String rollNo) {
