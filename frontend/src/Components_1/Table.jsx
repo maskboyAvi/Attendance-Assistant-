@@ -13,12 +13,12 @@ const TableComponent = () => {
       .then((result) => {
         console.log(result);
         const data = result.map((item) => {
-          const { id, rollNo,longitude,latitude,_29_09_2023 } = item;
+          const { id, rollNo,longitude,latitude,_16_10_2023 } = item;
           setLatitude(latitude);
           setLongitude(longitude);
           // Add . to id at the end of the string
           const SId= item.id + ".";
-          return { SId, rollNo,_29_09_2023 };
+          return { SId, rollNo,_16_10_2023 };
         });
         setTb1(data);
         console.log(data);
